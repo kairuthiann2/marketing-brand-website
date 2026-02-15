@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Gabu — Real Estate Brand Strategy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dist/output.css">
+</head>
+<body class="font-sans text-slate-700 bg-beige antialiased">
+
+    <!-- NAVBAR -->
+    <header class="fixed top-0 left-0 right-0 z-50 pt-4">
+        <div class="max-w-[1200px] mx-auto px-4 md:px-8 lg:px-20">
+            <nav class="bg-white rounded-2xl shadow-md px-6 lg:px-8 h-[88px] flex items-center justify-between">
+                    <a href="index.html" class="text-xl font-bold text-brand-dark hover:text-brand-teal transition-colors">Gabu.</a>
+                    <div class="hidden lg:flex items-center justify-center flex-1 gap-8">
+                        <a href="portfolio.html" class="text-sm font-medium text-slate-600 hover:text-brand-dark transition-colors">Our Work</a>
+                        <a href="services.html" class="text-sm font-medium text-slate-600 hover:text-brand-dark transition-colors">Services</a>
+                    </div>
+                    <div class="hidden lg:flex items-center">
+                        <a href="index.html#book" class="btn-nav-cta">Book your free consultation</a>
+                    </div>
+                    <button type="button" onclick="toggleMenu()" class="lg:hidden p-2 text-slate-600 hover:bg-slate-100 rounded-lg" aria-label="Toggle menu">
+                        <svg id="icon-menu" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                        <svg id="icon-close" class="hidden w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                    </button>
+            </nav>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="fixed inset-0 z-40 bg-white pt-24 px-6 pb-6 flex flex-col gap-4 lg:hidden hidden" aria-hidden="true">
+        <a href="index.html" class="text-2xl font-semibold text-slate-900 py-3 border-b border-slate-100" onclick="toggleMenu()">Home</a>
+        <a href="portfolio.html" class="text-2xl font-semibold text-slate-900 py-3 border-b border-slate-100" onclick="toggleMenu()">Our Work</a>
+        <a href="services.html" class="text-2xl font-semibold text-slate-900 py-3 border-b border-slate-100" onclick="toggleMenu()">Services</a>
+        <a href="index.html#book" class="mt-auto btn-primary text-center" onclick="toggleMenu()">Book your free consultation</a>
+    </div>
+
+    <!-- SERVICES HERO -->
+    <section class="pt-[160px] lg:pt-[180px] pb-24 lg:pb-32">
+        <div class="max-w-[1200px] mx-auto px-4 md:px-8 lg:px-20">
+            <div class="text-center max-w-2xl mx-auto reveal">
+                <span class="text-brand-600 font-semibold tracking-wide uppercase text-sm">Services</span>
+                <h1 class="mt-3 text-3xl lg:text-4xl font-semibold text-slate-900 tracking-tight">A Complete Brand Growth System</h1>
+                <p class="mt-4 text-slate-600 text-lg">Everything you need to build a recognizable personal brand — without chasing trends or forcing authority.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICE 1 — BRAND STRATEGY -->
+    <section class="py-24 lg:py-32 bg-slate-50">
+        <div class="max-w-[1200px] mx-auto px-4 md:px-8 lg:px-20">
+            <div class="max-w-3xl mx-auto reveal">
+                <span class="text-brand-600 font-semibold tracking-wide uppercase text-sm">Service 1</span>
+                <h2 class="mt-2 text-2xl lg:text-3xl font-semibold text-slate-900 tracking-tight">Brand Strategy &amp; Positioning</h2>
+                <p class="mt-6 text-slate-600 text-lg leading-relaxed">Before anything scales, it needs structure.</p>
+                <p class="mt-4 text-slate-600 text-lg leading-relaxed">This phase defines how your brand shows up, what it stands for, and how it communicates — visually and verbally. It ensures every piece of content, design, or campaign feels connected rather than random.</p>
+                <ul class="mt-6 space-y-2 text-slate-700">
+                    <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-4 h-4 text-brand-teal flex-shrink-0"><path d="M20 6 9 17l-5-5"></path></svg> Positioning &amp; niche clarity</li>
+                    <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-4 h-4 text-brand-teal flex-shrink-0"><path d="M20 6 9 17l-5-5"></path></svg> Brand voice &amp; messaging direction</li>
+                    <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-4 h-4 text-brand-teal flex-shrink-0"><path d="M20 6 9 17l-5-5"></path></svg> Visual identity foundation</li>
+                    <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-4 h-4 text-brand-teal flex-shrink-0"><path d="M20 6 9 17l-5-5"></path></svg> Content alignment framework</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICE 2 — CONTENT DIRECTION -->
+    <section class="py-24 lg:py-32 bg-white">
+        <div class="max-w-[1200px] mx-auto px-4 md:px-8 lg:px-20">
+            <div class="max-w-3xl mx-auto reveal">
+                <span class="text-brand-600 font-semibold tracking-wide uppercase text-sm">Service 2</span>
+                <h2 class="mt-2 text-2xl lg:text-3xl font-semibold text-slate-900 tracking-tight">Story-Led Content Direction</h2>
+                <p class="mt-6 text-slate-600 text-lg leading-relaxed">Content shouldn’t feel staged or exhausting.</p>
+                <p class="mt-4 text-slate-600 text-lg leading-relaxed">Instead of content days or scripted performances, we identify moments within your real workflow and turn them into story-driven assets that feel natural and repeatable.</p>
+                <ul class="mt-6 space-y-2 text-slate-700">
+                    <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-4 h-4 text-brand-teal flex-shrink-0"><path d="M20 6 9 17l-5-5"></path></svg> Content capture framework</li>
+                    <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-4 h-4 text-brand-teal flex-shrink-0"><path d="M20 6 9 17l-5-5"></path></svg> Reels, carousels, and static posts</li>
+                    <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-4 h-4 text-brand-teal flex-shrink-0"><path d="M20 6 9 17l-5-5"></path></svg> Story-driven editing</li>
+                    <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-4 h-4 text-brand-teal flex-shrink-0"><path d="M20 6 9 17l-5-5"></path></svg> Visual consistency across posts</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICE 3 — META ADVERTISING -->
+    <section class="py-24 lg:py-32 bg-slate-50">
+        <div class="max-w-[1200px] mx-auto px-4 md:px-8 lg:px-20">
+            <div class="max-w-3xl mx-auto reveal">
+                <span class="text-brand-600 font-semibold tracking-wide uppercase text-sm">Service 3</span>
+                <h2 class="mt-2 text-2xl lg:text-3xl font-semibold text-slate-900 tracking-tight">Buyer-Focused Meta Advertising</h2>
+                <p class="mt-6 text-slate-600 text-lg leading-relaxed">Organic content builds trust. Ads create demand.</p>
+                <p class="mt-4 text-slate-600 text-lg leading-relaxed">I design and manage Meta campaigns that put properties in front of serious buyers — clearly, calmly, and intentionally.</p>
+                <ul class="mt-6 space-y-2 text-slate-700">
+                    <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-4 h-4 text-brand-teal flex-shrink-0"><path d="M20 6 9 17l-5-5"></path></svg> Property-specific creatives</li>
+                    <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-4 h-4 text-brand-teal flex-shrink-0"><path d="M20 6 9 17l-5-5"></path></svg> Geo-targeted campaigns</li>
+                    <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-4 h-4 text-brand-teal flex-shrink-0"><path d="M20 6 9 17l-5-5"></path></svg> Clear qualification pathways</li>
+                    <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-4 h-4 text-brand-teal flex-shrink-0"><path d="M20 6 9 17l-5-5"></path></svg> Ongoing optimization</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICE 4 — DM AUTOMATION -->
+    <section class="py-24 lg:py-32 bg-white">
+        <div class="max-w-[1200px] mx-auto px-4 md:px-8 lg:px-20">
+            <div class="max-w-3xl mx-auto reveal">
+                <span class="text-brand-600 font-semibold tracking-wide uppercase text-sm">Service 4</span>
+                <h2 class="mt-2 text-2xl lg:text-3xl font-semibold text-slate-900 tracking-tight">DM Automation &amp; Lead Management</h2>
+                <p class="mt-6 text-slate-600 text-lg leading-relaxed">Speed matters — but so does tone.</p>
+                <p class="mt-4 text-slate-600 text-lg leading-relaxed">Automation is designed to respond instantly, qualify naturally, and move serious inquiries forward without feeling robotic or intrusive.</p>
+                <ul class="mt-6 space-y-2 text-slate-700">
+                    <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-4 h-4 text-brand-teal flex-shrink-0"><path d="M20 6 9 17l-5-5"></path></svg> Custom DM flows</li>
+                    <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-4 h-4 text-brand-teal flex-shrink-0"><path d="M20 6 9 17l-5-5"></path></svg> Lead qualification logic</li>
+                    <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-4 h-4 text-brand-teal flex-shrink-0"><path d="M20 6 9 17l-5-5"></path></svg> Calendar &amp; CRM integration</li>
+                    <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-4 h-4 text-brand-teal flex-shrink-0"><path d="M20 6 9 17l-5-5"></path></svg> Clean hand-off points</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICE 5 — ONGOING MANAGEMENT -->
+    <section class="py-24 lg:py-32 bg-slate-50">
+        <div class="max-w-[1200px] mx-auto px-4 md:px-8 lg:px-20">
+            <div class="max-w-3xl mx-auto reveal">
+                <span class="text-brand-600 font-semibold tracking-wide uppercase text-sm">Service 5</span>
+                <h2 class="mt-2 text-2xl lg:text-3xl font-semibold text-slate-900 tracking-tight">Ongoing Management &amp; Support</h2>
+                <p class="mt-6 text-slate-600 text-lg leading-relaxed">Brands aren’t built once — they’re maintained.</p>
+                <p class="mt-4 text-slate-600 text-lg leading-relaxed">I handle consistency, performance tracking, and refinements so your system keeps working quietly in the background.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES CLOSE -->
+    <section class="py-24 lg:py-32 bg-white border-t border-slate-100">
+        <div class="max-w-[1200px] mx-auto px-4 md:px-8 lg:px-20">
+            <div class="text-center max-w-2xl mx-auto reveal">
+                <h2 class="text-2xl lg:text-3xl font-semibold text-slate-900 tracking-tight">Built to Feel Sustainable — Not Overwhelming</h2>
+                <p class="mt-4 text-slate-600 text-lg">Everything here is designed to support how you already work, not replace it.</p>
+                <a href="portfolio.html" class="inline-flex items-center gap-2 mt-8 text-brand-600 font-semibold hover:text-brand-dark transition-colors">
+                    View Portfolio
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-5 h-5"><path d="m9 18 6-6-6-6"></path></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark py-12">
+        <div class="max-w-[1200px] mx-auto px-4 md:px-8 lg:px-20 flex flex-col md:flex-row justify-between items-center gap-6">
+            <a href="index.html" class="text-white font-bold text-xl hover:text-brand-teal transition-colors">Gabu</a>
+            <div class="flex gap-8 text-sm text-slate-300">
+                <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+            </div>
+            <p class="text-sm text-slate-400">© Gabu. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/animations.js"></script>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('mobile-menu');
+            var iconMenu = document.getElementById('icon-menu');
+            var iconClose = document.getElementById('icon-close');
+            var isHidden = menu.classList.contains('hidden');
+            if (isHidden) {
+                menu.classList.remove('hidden');
+                iconMenu.classList.add('hidden');
+                iconClose.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            } else {
+                menu.classList.add('hidden');
+                iconMenu.classList.remove('hidden');
+                iconClose.classList.add('hidden');
+                document.body.style.overflow = '';
+            }
+        }
+    </script>
+</body>
+</html>

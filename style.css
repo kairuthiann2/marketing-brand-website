@@ -1,0 +1,462 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reusable components - matches Tailwind config */
+
+/* Section typography - Headlines: Montserrat (bold, modern) | Body: Inter (clean, readable) */
+.section-subheading {
+  font-family: Inter, 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.875rem;  /* 14px */
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+.section-heading {
+  font-family: Montserrat, ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+  /* Responsive font size */
+  font-size: 1.5rem;       /* 24px - mobile */
+}
+
+@media (min-width: 640px) {
+  .section-heading {
+    font-size: 1.875rem;  /* 30px - sm */
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-heading {
+    font-size: 2.25rem;   /* 36px - lg */
+  }
+}
+
+.container-custom {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@media (min-width: 768px) {
+  .container-custom {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-custom {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+.section-wrapper {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+@media (min-width: 1024px) {
+  .section-wrapper {
+    padding-top: 112px;
+    padding-bottom: 112px;
+  }
+}
+
+/* Services section: less top padding (push header up), more bottom padding (push CTA down) */
+.services-section {
+  padding-top: 48px;
+  padding-bottom: 80px;
+}
+
+@media (min-width: 1024px) {
+  .services-section {
+    padding-top: 80px;
+    padding-bottom: 96px;
+  }
+}
+
+.btn-primary {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  padding: 0 32px;
+  border-radius: 12px;
+  background-color: #1A393B;
+  color: white;
+  font-weight: 700;
+  font-family: Montserrat, ui-sans-serif, system-ui, sans-serif;
+  white-space: nowrap;
+  text-align: center;
+  transition: all 300ms ease-in-out;
+}
+
+.btn-primary:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.btn-nav-cta {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  padding: 0 32px;
+  border-radius: 12px;
+  background-color: #1A393B;
+  color: white;
+  font-weight: 700;
+  font-family: Montserrat, ui-sans-serif, system-ui, sans-serif;
+  white-space: nowrap;
+  text-align: center;
+  transition: all 300ms ease-in-out;
+}
+
+.btn-nav-cta:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  padding: 0 32px;
+  border-radius: 12px;
+  border: 2px solid #1A393B;
+  color: #1A393B;
+  font-weight: 700;
+  font-family: Montserrat, ui-sans-serif, system-ui, sans-serif;
+  white-space: nowrap;
+  text-align: center;
+  background: transparent;
+  transition: all 300ms ease-in-out;
+}
+
+.btn-secondary:hover {
+  transform: scale(1.03);
+  background-color: #1A393B;
+  color: white;
+}
+
+.btn-secondary-teal {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  padding: 0 32px;
+  border-radius: 12px;
+  border: 2px solid #13969F;
+  color: #13969F;
+  font-weight: 700;
+  font-family: Montserrat, ui-sans-serif, system-ui, sans-serif;
+  white-space: nowrap;
+  text-align: center;
+  background: transparent;
+  transition: all 300ms ease-in-out;
+}
+
+.btn-secondary-teal:hover {
+  transform: scale(1.03);
+}
+
+/* Ensure button text never wraps on narrow screens - reduce padding when needed */
+@media (max-width: 380px) {
+  .btn-primary,
+  .btn-nav-cta,
+  .btn-secondary,
+  .btn-secondary-teal {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.05), 0 1px 2px -1px rgb(0 0 0 / 0.05);
+  transition: all 300ms ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.08), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+  transform: translateY(-4px);
+}
+
+/* Scroll reveal - sections fade in, translate from 20px down, 500ms */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 500ms ease-out, transform 500ms ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-100 { transition-delay: 100ms; }
+.reveal-delay-200 { transition-delay: 200ms; }
+.reveal-delay-300 { transition-delay: 300ms; }
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 200px;
+}
+
+/* Services section - expandable entries, ellipsis inside low-opacity line */
+.service-entry {
+  border-bottom: 1px solid transparent;
+}
+
+.service-header {
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.2s ease;
+}
+
+.service-header:hover,
+.service-header:focus-visible {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Green line below the text/subtitle block, low opacity - matches reference */
+.service-line {
+  height: 1px;
+  width: 100%;
+  background: rgba(19, 150, 159, 0.25);
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+
+.service-entry.is-expanded .service-line {
+  opacity: 0.6;
+}
+
+/* Smooth unfold/fold using grid for fluid height animation */
+.service-expanded {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-entry.is-expanded .service-expanded {
+  grid-template-rows: 1fr;
+}
+
+.service-expanded > * {
+  overflow: hidden;
+}
+
+.service-expanded-inner {
+  padding: 1.25rem 0 1.5rem 1rem;
+  border-left: 3px solid rgba(19, 150, 159, 0.3);
+  margin-left: 0.25rem;
+}
+
+/* FAQ accordion cards - white, rounded, soft shadow */
+.faq-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+/* FAQ chevron rotation - matches service expand & buttons (cubic-bezier(0.4, 0, 0.2, 1), 400ms) */
+.faq-chevron {
+  display: inline-flex;
+  transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* FAQ expanded state - use faq-open only so we control animation (not [open]) */
+.faq-card.faq-open .faq-chevron {
+  transform: rotate(180deg);
+}
+
+/* FAQ content expand/collapse - same easing as service-expanded */
+.faq-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-card.faq-open .faq-content {
+  grid-template-rows: 1fr;
+}
+
+.faq-content-inner {
+  overflow: hidden;
+}
+
+/* Hide native details triangle - we use custom chevron */
+.faq-card summary::-webkit-details-marker,
+.faq-card summary::marker {
+  display: none;
+}
+
+/* Focus ring for accessibility */
+a:focus-visible,
+button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px #13969F;
+}
+
+/* Testimonial carousel - smooth, soothing slide with refined easing */
+[data-testimonial-track] {
+  display: flex;
+  width: 300%;
+  will-change: transform;
+  transition: transform 700ms cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+[data-testimonial-track] [data-testimonial-slide] {
+  flex: 0 0 33.333%;
+  min-width: 33.333%;
+}
+
+/* Larger gap between testimonials on small screens - prevents adjacent content from bleeding in */
+@media (max-width: 1023px) {
+  [data-testimonial-track] [data-testimonial-slide] {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Infinite marquee - logos scroll right-to-left continuously */
+.marquee-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Process section image frame - white frame + teal L-shaped accent + soft shadow */
+.process-img-frame {
+  position: relative;
+  display: block;
+  overflow: visible;
+}
+
+/* Teal L-shaped accent - overlays top-right corner, creates "wrapped" look */
+.process-img-frame-accent {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 48px;
+  height: 48px;
+  background: #1A393B;
+  border-radius: 0 12px 0 0;
+  z-index: 2;
+}
+
+/* Alternate: teal accent at bottom-left for visual variety */
+.process-img-frame.process-img-frame--alt .process-img-frame-accent {
+  top: auto;
+  right: auto;
+  bottom: 0;
+  left: 0;
+  border-radius: 0 0 0 12px;
+}
+
+/* White inner frame - soft grey shadow, padding for image whitespace */
+.process-img-frame-inner {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08), 0 4px 16px rgba(0, 0, 0, 0.06);
+  display: flex;
+}
+
+.process-img-frame-inner img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  min-height: 0;
+  display: block;
+  border-radius: 6px;
+}
+
+/* Optimize image scaling on all devices */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Mobile-first: full-width images & illustrations */
+@media (max-width: 1023px) {
+  .section-img-wrapper {
+    width: 100%;
+  }
+
+  .hero-image-block {
+    width: 100%;
+  }
+
+  .hero-img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .about-img-wrapper {
+    width: 100%;
+  }
+
+  /* Process phases: stack consistently, full-width images */
+  .process-img-frame {
+    width: 100%;
+  }
+}
+
+/* Reduce gaps on small screens for tighter layout */
+@media (max-width: 639px) {
+  .container-custom {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

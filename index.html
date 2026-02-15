@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gabu | Real Estate Personal Brand Strategy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dist/output.css">
+</head>
+<body class="font-sans text-slate-700 bg-beige antialiased overflow-x-hidden">
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 left-0 right-0 z-50 pt-4">
+    <div class="container-custom">
+      <nav class="bg-white rounded-2xl shadow-md px-6 lg:px-8 h-[88px] flex items-center justify-between">
+          <a href="index.html" class="text-xl font-bold text-brand-dark hover:text-brand-teal transition-colors">
+            Victor.
+          </a>
+          <div class="hidden lg:flex items-center justify-center flex-1 gap-8">
+            <a href="portfolio.html" class="text-sm font-medium text-slate-600 hover:text-brand-dark transition-colors">Our Work</a>
+            <a href="services.html" class="text-sm font-medium text-slate-600 hover:text-brand-dark transition-colors">Services</a>
+          </div>
+          <div class="hidden lg:flex items-center">
+            <a href="#book" class="btn-nav-cta">Book your free consultation</a>
+          </div>
+          <button type="button" onclick="toggleMenu()" class="lg:hidden p-2 text-slate-600 hover:bg-slate-100 rounded-lg" aria-label="Toggle menu">
+            <svg id="icon-menu" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            <svg id="icon-close" class="hidden w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed inset-0 z-40 bg-white pt-32 px-6 pb-6 flex flex-col gap-4 lg:hidden hidden" aria-hidden="true">
+    <a href="index.html" class="text-2xl font-semibold text-slate-900 py-3 border-b border-slate-100" onclick="toggleMenu()">Home</a>
+    <a href="portfolio.html" class="text-2xl font-semibold text-slate-900 py-3 border-b border-slate-100" onclick="toggleMenu()">Our Work</a>
+    <a href="services.html" class="text-2xl font-semibold text-slate-900 py-3 border-b border-slate-100" onclick="toggleMenu()">Services</a>
+    <a href="#book" class="mt-auto btn-primary" onclick="toggleMenu()">Book your free consultation</a>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="section-wrapper pt-[120px] sm:pt-[140px] lg:pt-[180px] pb-16 sm:pb-20 lg:pb-32">
+      <div class="container-custom">
+        <div class="grid grid-cols-12 gap-8 sm:gap-12 lg:gap-24 items-center">
+          <div class="col-span-12 lg:col-span-6 space-y-8 reveal">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#D1E6F3] text-slate-600 text-sm font-medium">
+              <span class="relative flex h-2 w-2">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-teal opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-teal"></span>
+              </span>
+              For Realtors Tired Of Invisibility
+            </div>
+            <div class="flex items-center gap-4 text-sm text-slate-600">
+              <div class="flex -space-x-2">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=64&h=64" alt="" class="w-8 h-8 rounded-full border-2 border-white object-cover">
+                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=64&h=64" alt="" class="w-8 h-8 rounded-full border-2 border-white object-cover">
+              </div>
+              <span>Trusted by top 1% Realtors</span>
+            </div>
+            <h1 class="font-heading text-4xl lg:text-5xl xl:text-6xl font-bold text-brand-dark tracking-tight leading-tight">
+              Stop Chasing Leads. <br>
+              Become The Brand Sellers Choose First.
+            </h1>
+            <p class="text-lg text-slate-600 max-w-lg">
+              We build high-converting personal brands for realtors using cinematic content and automated client acquisition systems. No cold calling. No door knocking.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6">
+              <a href="#book" class="btn-nav-cta">Book your free consultation</a>
+              <a href="#how-it-works" class="btn-secondary-teal">See How it Works</a>
+            </div>
+          </div>
+          <div class="col-span-12 lg:col-span-6 relative reveal reveal-delay-100 overflow-visible">
+            <div class="hero-image-block w-full min-h-[260px] sm:min-h-[320px] lg:min-h-[588px] lg:h-[588px] pt-6 pl-4 pr-4 pb-4 sm:pt-8 sm:pl-6 lg:pt-[165px] lg:pl-[168px] lg:pr-0 lg:pb-0 flex flex-col justify-end items-center lg:items-end rounded-xl bg-[#1B3A3C] overflow-hidden">
+              <img src="images/profile-hero.png" alt="Victor - Real Estate Consultant" class="hero-img w-full max-w-full lg:max-w-[85%] h-auto object-cover object-right-bottom object-center grayscale block" loading="eager" decoding="async">
+            </div>
+          </div>
+        </div>
+        <!-- Client Trust Data Metric Mini-Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mt-12 sm:mt-16 lg:mt-32">
+          <div class="card reveal reveal-delay-200">
+            <p class="text-xs font-medium text-slate-500 uppercase tracking-wider mb-2">Marketing Expertise</p>
+            <p class="text-xl font-bold text-brand-dark">4+ Years</p>
+          </div>
+          <div class="card reveal reveal-delay-200">
+            <p class="text-xs font-medium text-slate-500 uppercase tracking-wider mb-2">Average Client Results</p>
+            <p class="text-xl font-bold text-brand-dark">+ 3 Listings / Mo</p>
+          </div>
+          <div class="card reveal reveal-delay-200">
+            <p class="text-xs font-medium text-slate-500 uppercase tracking-wider mb-2">Real Estate Client Closed</p>
+            <p class="text-xl font-bold text-brand-dark">$450M+</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOGO STRIP -->
+    <section class="section-wrapper">
+      <div class="container-custom">
+        <p class="text-center text-sm text-slate-500 mb-12 reveal">Trusted by 1000s of agents worldwide.</p>
+        <div class="marquee-wrapper overflow-hidden">
+          <div class="marquee-track flex items-center gap-12 lg:gap-16">
+            <span class="text-xl font-bold text-slate-500 whitespace-nowrap">Zillow</span>
+            <span class="text-xl font-bold text-slate-500 whitespace-nowrap">Remax</span>
+            <span class="text-xl font-bold text-slate-500 whitespace-nowrap">Freddie Mac</span>
+            <span class="text-xl font-bold text-slate-500 whitespace-nowrap">Coreas</span>
+            <span class="text-xl font-bold text-slate-500 whitespace-nowrap">Dias</span>
+            <span class="text-xl font-bold text-slate-500 whitespace-nowrap">Zillow</span>
+            <span class="text-xl font-bold text-slate-500 whitespace-nowrap">Remax</span>
+            <span class="text-xl font-bold text-slate-500 whitespace-nowrap">Freddie Mac</span>
+            <span class="text-xl font-bold text-slate-500 whitespace-nowrap">Coreas</span>
+            <span class="text-xl font-bold text-slate-500 whitespace-nowrap">Dias</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AGITATION + SOLUTION (combined, no background breaks) -->
+    <section class="section-wrapper">
+      <div class="container-custom flex flex-col items-center gap-10 sm:gap-14 lg:gap-24">
+      <!-- Block 1: Problem / Agitation -->
+      <div class="flex flex-col lg:flex-row items-start gap-10 sm:gap-14 lg:gap-24 w-full">
+        <div class="w-full lg:w-1/2 reveal">
+          <div class="section-img-wrapper w-full aspect-[4/3] sm:aspect-[497/408] lg:w-[497px] lg:h-[408px] lg:aspect-auto shrink-0 rounded-[12px] overflow-hidden bg-slate-200 shadow-[0_4px_4px_0_rgba(0,0,0,0.25),0_1px_3px_0_rgba(0,0,0,0.10),0_1px_2px_-1px_rgba(0,0,0,0.10)]">
+            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80" srcset="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=400&q=85 400w, https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80 800w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 497px" alt="Expert agent seeking visibility" class="w-full h-full object-cover object-center grayscale">
+          </div>
+        </div>
+        <div class="w-full lg:w-1/2 space-y-8 reveal reveal-delay-100">
+          <h2 class="font-heading section-heading text-slate-900">
+            You Are An Expert Agent, But The Market Just <span class="text-brand-teal">Doesn&apos;t See You.</span>
+          </h2>
+          <p class="text-slate-600 text-lg">
+            The rules changed. Posting more listings. Running more open houses. Waiting on referrals. That used to work. Now?
+          </p>
+          <ul class="space-y-6">
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-red-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              <span class="text-slate-700">You create content. It barely gets seen.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-red-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              <span class="text-slate-700">Every feed looks the same; so sellers choose whoever feels most recognizable.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-red-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              <span class="text-slate-700">When someone shows interest, everything depends on you replying manually.</span>
+            </li>
+          </ul>
+          <p class="text-slate-600 text-lg">
+            So leads slip through. Not because you&apos;re bad. Because you don&apos;t have a system.
+          </p>
+        </div>
+      </div>
+
+      <!-- Block 2: Solution -->
+      <div class="flex flex-col lg:flex-row items-start gap-10 sm:gap-14 lg:gap-24 w-full">
+        <div class="w-full lg:w-1/2 space-y-8 reveal">
+          <h2 class="font-heading section-heading text-slate-900">
+            What If Sellers <span class="text-brand-teal">Reached Out First?</span>
+          </h2>
+          <p class="text-slate-600 text-lg font-medium">
+            Imagine opening your phone and seeing:
+          </p>
+          <ul class="space-y-6">
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-brand-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span class="text-slate-700">Sellers asking how to list</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-brand-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span class="text-slate-700">Buyers inquiring before homes hit the market</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-brand-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span class="text-slate-700">1-2 consultations booked every month</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-brand-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span class="text-slate-700">Less chasing. More closing.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-brand-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span class="text-slate-700">Content that works — without taking over your life</span>
+            </li>
+          </ul>
+          <p class="text-slate-600 text-lg">
+            This isn&apos;t about going viral. It&apos;s about building a predictable system that turns attention into appointments.
+          </p>
+          <div class="flex justify-start">
+            <a href="#how-it-works" class="btn-secondary-teal">See How it Works</a>
+          </div>
+        </div>
+        <div class="w-full lg:w-1/2 reveal reveal-delay-100">
+          <div class="section-img-wrapper w-full aspect-[4/3] sm:aspect-[497/408] lg:w-[497px] lg:h-[408px] lg:aspect-auto shrink-0 rounded-[12px] overflow-hidden bg-slate-200 shadow-[0_4px_4px_0_rgba(0,0,0,0.25),0_1px_3px_0_rgba(0,0,0,0.10),0_1px_2px_-1px_rgba(0,0,0,0.10)]">
+            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80" srcset="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=400&q=85 400w, https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80 800w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 497px" alt="Phone with calendar - appointments booked" class="w-full h-full object-cover object-center grayscale">
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- 3-PHASE AUTHORITY SYSTEM (The Process) -->
+    <section id="how-it-works" class="section-wrapper">
+      <div class="container-custom flex flex-col items-center gap-10 sm:gap-14 lg:gap-24">
+      <!-- Header -->
+        <div class="text-center max-w-2xl mx-auto reveal">
+          <span class="section-subheading inline-block px-4 py-2 rounded-full border border-brand-teal bg-white text-slate-700 mb-6">The Process</span>
+          <h2 class="section-heading text-brand-dark">The 3-Phase Authority System</h2>
+          <p class="mt-4 text-slate-600 text-lg">
+            We help you get consistent listing appointments every month. So you stop relying on hope. And start operating with strategy.
+          </p>
+        </div>
+
+      <!-- Process phases: one container wrapping three phase divs, each with 2 column divs -->
+        <div class="w-full flex flex-col gap-10 sm:gap-14 lg:gap-24 reveal">
+        <!-- Phase 1: Image+list left | Number+text+image right -->
+        <div class="flex flex-col lg:flex-row items-center gap-10 sm:gap-14 lg:gap-24 pb-10 sm:pb-14 lg:pb-24">
+          <div class="w-full lg:w-1/2 flex flex-col gap-8 order-2 lg:order-1">
+            <div class="order-2 lg:order-1 process-img-frame w-full max-w-full lg:max-w-[380px] aspect-[4/3] sm:aspect-[380/300] shrink-0">
+              <div class="process-img-frame-accent" aria-hidden="true"></div>
+              <div class="process-img-frame-inner">
+                <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=800&q=80" srcset="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=400&q=85 400w, https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=800&q=80 800w" sizes="(max-width: 640px) 100vw, 380px" alt="Agent recording content with microphone" class="w-full h-full object-cover object-center grayscale">
+              </div>
+            </div>
+            <div class="order-1 lg:order-2">
+              <p class="text-sm font-semibold text-slate-900 mb-4">What you get</p>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3 text-slate-600"><svg class="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Clear content plan every month</li>
+                <li class="flex items-start gap-3 text-slate-600"><svg class="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Simple scripts and hooks tailored to your market</li>
+                <li class="flex items-start gap-3 text-slate-600"><svg class="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Weekly feedback to improve performance</li>
+                <li class="flex items-start gap-3 text-slate-600"><svg class="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> A repeatable filming process</li>
+              </ul>
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2 flex flex-col gap-8 order-1 lg:order-2">
+            <div class="flex justify-start">
+              <span class="w-16 h-16 flex items-center justify-center rounded-xl bg-brand-dark text-white text-3xl font-bold">1</span>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-slate-900 mb-4">Make You the Go-To Agent in Your Area</h3>
+              <p class="text-slate-600 leading-relaxed">
+                We help you show up online in a way that builds trust before anyone meets you. We guide you on what to say, how to say it, and how to film it, in under 2 hours per week.
+              </p>
+            </div>
+            <div class="process-img-frame process-img-frame--alt w-full max-w-full lg:max-w-[380px] aspect-[4/3] sm:aspect-[380/300] shrink-0">
+              <div class="process-img-frame-accent" aria-hidden="true"></div>
+              <div class="process-img-frame-inner">
+                <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&w=800&q=80" srcset="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&w=400&q=85 400w, https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&w=800&q=80 800w" sizes="(max-width: 640px) 100vw, 380px" alt="Filming setup with ring light" class="w-full h-full object-cover object-center grayscale">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phase 2: Number+text+image left | Image+list right -->
+        <div class="flex flex-col lg:flex-row items-center gap-10 sm:gap-14 lg:gap-24 pb-10 sm:pb-14 lg:pb-24">
+          <div class="w-full lg:w-1/2 flex flex-col gap-8 order-1">
+            <div class="flex justify-start">
+              <span class="w-16 h-16 flex items-center justify-center rounded-xl bg-brand-dark text-white text-3xl font-bold">2</span>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-slate-900 mb-4">Put Your Listings in Front of Serious Buyers</h3>
+              <p class="text-slate-600 leading-relaxed">
+                Instead of waiting for buyers to find you, we put your properties directly in front of them. We run targeted ads that attract real inquiries — not just views.
+              </p>
+            </div>
+            <div class="process-img-frame process-img-frame--alt w-full max-w-full lg:max-w-[380px] aspect-[4/3] sm:aspect-[380/300] shrink-0">
+              <div class="process-img-frame-accent" aria-hidden="true"></div>
+              <div class="process-img-frame-inner">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" srcset="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=400&q=85 400w, https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80 800w" sizes="(max-width: 640px) 100vw, 380px" alt="Digital marketing analytics" class="w-full h-full object-cover object-center grayscale">
+              </div>
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2 flex flex-col gap-8 order-2">
+            <div class="order-2 lg:order-1 process-img-frame w-full max-w-full lg:max-w-[380px] aspect-[4/3] sm:aspect-[380/300] shrink-0">
+              <div class="process-img-frame-accent" aria-hidden="true"></div>
+              <div class="process-img-frame-inner">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" srcset="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=400&q=85 400w, https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80 800w" sizes="(max-width: 640px) 100vw, 380px" alt="Targeted property ads dashboard" class="w-full h-full object-cover object-center grayscale">
+              </div>
+            </div>
+            <div class="order-1 lg:order-2">
+              <p class="text-sm font-semibold text-slate-900 mb-4">What you get</p>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3 text-slate-600"><svg class="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Done-for-you property ads</li>
+                <li class="flex items-start gap-3 text-slate-600"><svg class="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Targeted exposure to the right buyers</li>
+                <li class="flex items-start gap-3 text-slate-600"><svg class="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Ongoing performance optimization</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phase 3: Image+list left | Number+text+image right -->
+        <div class="flex flex-col lg:flex-row items-center gap-10 sm:gap-14 lg:gap-24 pb-0">
+          <div class="w-full lg:w-1/2 flex flex-col gap-8 order-2 lg:order-1">
+            <div class="order-2 lg:order-1 process-img-frame w-full max-w-full lg:max-w-[380px] aspect-[4/3] sm:aspect-[380/300] shrink-0">
+              <div class="process-img-frame-accent" aria-hidden="true"></div>
+              <div class="process-img-frame-inner">
+                <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80" srcset="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=400&q=85 400w, https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80 800w" sizes="(max-width: 640px) 100vw, 380px" alt="Phone with calendar - automated booking" class="w-full h-full object-cover object-center grayscale">
+              </div>
+            </div>
+            <div class="order-1 lg:order-2">
+              <p class="text-sm font-semibold text-slate-900 mb-4">We set up smart automation that:</p>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3 text-slate-600"><span class="w-2 h-2 rounded-full bg-brand-teal flex-shrink-0 mt-2"></span> Responds instantly</li>
+                <li class="flex items-start gap-3 text-slate-600"><span class="w-2 h-2 rounded-full bg-brand-teal flex-shrink-0 mt-2"></span> Qualifies serious prospects</li>
+                <li class="flex items-start gap-3 text-slate-600"><span class="w-2 h-2 rounded-full bg-brand-teal flex-shrink-0 mt-2"></span> Sends helpful resources</li>
+                <li class="flex items-start gap-3 text-slate-600"><span class="w-2 h-2 rounded-full bg-brand-teal flex-shrink-0 mt-2"></span> Books consultations on your calendar</li>
+              </ul>
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2 flex flex-col gap-8 order-1 lg:order-2">
+            <div class="flex justify-start">
+              <span class="w-16 h-16 flex items-center justify-center rounded-xl bg-brand-dark text-white text-3xl font-bold">3</span>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-slate-900 mb-4">Turn DMs Into Booked Appointments Automatically</h3>
+              <p class="text-slate-600 leading-relaxed">No more manually replying to every message.</p>
+            </div>
+            <div class="process-img-frame process-img-frame--alt w-full max-w-full lg:max-w-[380px] aspect-[4/3] sm:aspect-[380/300] shrink-0">
+              <div class="process-img-frame-accent" aria-hidden="true"></div>
+              <div class="process-img-frame-inner">
+                <img src="https://images.unsplash.com/photo-1551269901-5c5e14c25df7?auto=format&fit=crop&w=800&q=80" srcset="https://images.unsplash.com/photo-1551269901-5c5e14c25df7?auto=format&fit=crop&w=400&q=85 400w, https://images.unsplash.com/photo-1551269901-5c5e14c25df7?auto=format&fit=crop&w=800&q=80 800w" sizes="(max-width: 640px) 100vw, 380px" alt="Smartphone calendar automation" class="w-full h-full object-cover object-center grayscale">
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLIENT RESULTS (Testimonials) -->
+    <section class="section-wrapper">
+      <div class="container-custom">
+        <!-- Static header - not part of carousel -->
+        <div class="text-center max-w-2xl mx-auto mb-12 lg:mb-16 reveal">
+          <span class="section-subheading inline-block px-4 py-2 rounded-full border border-[#6ED3CF] bg-white text-slate-700 mb-6">Client Results</span>
+          <h2 class="section-heading text-slate-900">Real Realtors Documented Results</h2>
+        </div>
+
+        <!-- Card + carousel - Jules Studio style: buttons inside on lg, below card on mobile -->
+        <div data-testimonials-carousel class="relative w-full reveal">
+          <div class="relative bg-white rounded-2xl shadow-lg p-6 sm:p-8 lg:p-12">
+            <!-- Left arrow - inside card on lg, in button row on mobile -->
+            <button type="button" data-carousel-prev class="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white border-2 border-[#6ED3CF] flex items-center justify-center text-brand-teal hover:bg-brand-teal/10 transition-colors shadow-sm lg:flex hidden" aria-label="Previous testimonial">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+
+            <div class="relative overflow-hidden min-h-[340px] sm:min-h-[360px] px-4 lg:px-14">
+              <div data-testimonial-track class="flex h-full">
+              <div data-testimonial-slide class="testimonial-slide flex-shrink-0 w-full flex flex-col justify-center items-center text-center py-4">
+                <p class="text-xl font-semibold text-slate-900 mb-4">&quot;I finally stopped competing on commission.&quot;</p>
+                <p class="text-slate-700 leading-relaxed mb-6 text-center max-w-xl mx-auto">
+                  I was skeptical about social media, but <strong>Victor&apos;s storytelling approach completely changed</strong> <strong>how I show up online</strong>. A seller watched three of my Reels, reached out directly, and listed their $1.2 million home with me. No open house. No cold calling. Just content that positioned me as the expert they wanted to work with.
+                </p>
+                <div class="w-full max-w-xs h-px bg-brand-teal mx-auto mb-6"></div>
+                <p class="text-brand-teal font-medium mb-1">&mdash; Jennifer L., Realtor</p>
+                <p class="text-slate-500 text-sm mb-6">Markham</p>
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&h=80" alt="Jennifer L." class="w-16 h-16 rounded-full object-cover border-2 border-brand-teal mx-auto">
+              </div>
+              <div data-testimonial-slide class="testimonial-slide flex-shrink-0 w-full flex flex-col justify-center items-center text-center py-4">
+                <p class="text-xl font-semibold text-slate-900 mb-4">&quot;The content quality is unlike anything else.&quot;</p>
+                <p class="text-slate-700 leading-relaxed mb-6 text-center max-w-xl mx-auto">
+                  I look like a celebrity agent. <strong>Sellers are actually recognizing me</strong> at open houses now. Victor knows real estate and how to make agents stand out in a crowded market.
+                </p>
+                <div class="w-full max-w-xs h-px bg-brand-teal mx-auto mb-6"></div>
+                <p class="text-brand-teal font-medium mb-1">&mdash; David K., Realtor</p>
+                <p class="text-slate-500 text-sm mb-6">Century 21 Agent</p>
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&h=80" alt="David K." class="w-16 h-16 rounded-full object-cover border-2 border-brand-teal mx-auto">
+              </div>
+              <div data-testimonial-slide class="testimonial-slide flex-shrink-0 w-full flex flex-col justify-center items-center text-center py-4">
+                <p class="text-xl font-semibold text-slate-900 mb-4">&quot;My pipeline has never been fuller.&quot;</p>
+                <p class="text-slate-700 leading-relaxed mb-6 text-center max-w-xl mx-auto">
+                  We went from zero social presence to <strong>15k targeted views in 90 days</strong>. The system works. Victor&apos;s approach to content and automation is exactly what busy agents need.
+                </p>
+                <div class="w-full max-w-xs h-px bg-brand-teal mx-auto mb-6"></div>
+                <p class="text-brand-teal font-medium mb-1">&mdash; Michael R., Realtor</p>
+                <p class="text-slate-500 text-sm mb-6">Keller Williams</p>
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=80&h=80" alt="Michael R." class="w-16 h-16 rounded-full object-cover border-2 border-brand-teal mx-auto">
+              </div>
+              </div>
+            </div>
+
+            <!-- Fixed pagination - current full opacity, total lower opacity -->
+            <p data-carousel-pagination class="text-center pt-6 text-brand-teal text-sm font-medium">
+              <span data-carousel-current>1</span>/<span data-carousel-total class="opacity-50">3</span>
+            </p>
+
+            <!-- Right arrow - inside card on lg, in button row on mobile -->
+            <button type="button" data-carousel-next class="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white border-2 border-[#6ED3CF] flex items-center justify-center text-brand-teal hover:bg-brand-teal/10 transition-colors shadow-sm lg:flex hidden" aria-label="Next testimonial">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+
+          <!-- Mobile: buttons below card, centered side-by-side (Jules Studio pattern) -->
+          <div class="flex justify-center gap-4 mt-6 lg:hidden">
+            <button type="button" data-carousel-prev-mobile class="w-12 h-12 rounded-full bg-white border-2 border-[#6ED3CF] flex items-center justify-center text-brand-teal hover:bg-brand-teal/10 transition-colors shadow-sm" aria-label="Previous testimonial">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+            <button type="button" data-carousel-next-mobile class="w-12 h-12 rounded-full bg-white border-2 border-[#6ED3CF] flex items-center justify-center text-brand-teal hover:bg-brand-teal/10 transition-colors shadow-sm" aria-label="Next testimonial">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES (Expandable) -->
+    <section class="section-wrapper services-section">
+      <div class="container-custom">
+        <div class="reveal">
+          <div class="text-center mb-8 lg:mb-10">
+            <span class="section-subheading inline-block px-4 py-2 rounded-full border border-brand-teal text-brand-teal">Services</span>
+            <h2 class="section-heading text-slate-900 mt-4 sm:mt-6">The Complete Authority package</h2>
+          </div>
+          <div class="service-entries text-left space-y-8 sm:space-y-10" data-service-entries>
+            <article class="service-entry" data-service-entry>
+              <div class="service-header" data-service-trigger tabindex="0" role="button" aria-expanded="false" aria-controls="service-content-1" id="service-trigger-1">
+                <div class="flex items-center gap-4 pt-4 sm:pt-5 pb-3">
+                  <span class="text-brand-teal font-mono text-lg sm:text-xl font-bold shrink-0">01</span>
+                  <span class="text-brand-teal font-medium text-lg sm:text-xl">Story-Led Content Direction<span class="service-ellipsis opacity-60">…</span></span>
+                </div>
+              </div>
+              <div id="service-content-1" class="service-expanded" role="region" aria-labelledby="service-trigger-1" aria-hidden="true">
+                <div class="service-expanded-inner">
+                  <p class="text-slate-800 text-base sm:text-lg leading-relaxed mb-4">Story-led content positions you as the go-to expert. We craft scripts, hooks, and angles tailored to your market so you film once and resonate everywhere.</p>
+                  <ul class="space-y-2 text-slate-700"><li class="flex items-center gap-2"><svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Monthly content plans</li><li class="flex items-center gap-2"><svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Market-specific scripts</li><li class="flex items-center gap-2"><svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Weekly feedback & optimization</li></ul>
+                </div>
+              </div>
+              <div class="service-line"></div>
+            </article>
+            <article class="service-entry" data-service-entry>
+              <div class="service-header" data-service-trigger tabindex="0" role="button" aria-expanded="false" aria-controls="service-content-2" id="service-trigger-2">
+                <div class="flex items-center gap-4 pt-4 sm:pt-5 pb-3">
+                  <span class="text-brand-teal font-mono text-lg sm:text-xl font-bold shrink-0">02</span>
+                  <span class="text-brand-teal font-medium text-lg sm:text-xl">Cinematic Content Editing & Post Production<span class="service-ellipsis opacity-60">…</span></span>
+                </div>
+              </div>
+              <div id="service-content-2" class="service-expanded" role="region" aria-labelledby="service-trigger-2" aria-hidden="true">
+                <div class="service-expanded-inner">
+                  <p class="text-slate-800 text-base sm:text-lg leading-relaxed mb-4">Professional editing that turns raw footage into scroll-stopping content. Clean cuts, captions, and pacing that keep viewers watching.</p>
+                  <ul class="space-y-2 text-slate-700"><li class="flex items-center gap-2"><svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Reels & short-form video</li><li class="flex items-center gap-2"><svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Captions & graphics</li><li class="flex items-center gap-2"><svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Batch delivery each month</li></ul>
+                </div>
+              </div>
+              <div class="service-line"></div>
+            </article>
+            <article class="service-entry" data-service-entry>
+              <div class="service-header" data-service-trigger tabindex="0" role="button" aria-expanded="false" aria-controls="service-content-3" id="service-trigger-3">
+                <div class="flex items-center gap-4 pt-4 sm:pt-5 pb-3">
+                  <span class="text-brand-teal font-mono text-lg sm:text-xl font-bold shrink-0">03</span>
+                  <span class="text-brand-teal font-medium text-lg sm:text-xl">Brand Strategy<span class="service-ellipsis opacity-60">…</span></span>
+                </div>
+              </div>
+              <div id="service-content-3" class="service-expanded" role="region" aria-labelledby="service-trigger-3" aria-hidden="true">
+                <div class="service-expanded-inner">
+                  <p class="text-slate-800 text-base sm:text-lg leading-relaxed mb-4">A brand identity that stands out. We define your positioning, voice, and visual system so every touchpoint feels intentional.</p>
+                  <ul class="space-y-2 text-slate-700"><li class="flex items-center gap-2"><svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Positioning & messaging</li><li class="flex items-center gap-2"><svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Visual guidelines</li>                <li class="flex items-center gap-2"><svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Content pillars</li></ul>
+                </div>
+              </div>
+              <div class="service-line"></div>
+            </article>
+            <article class="service-entry" data-service-entry>
+              <div class="service-header" data-service-trigger tabindex="0" role="button" aria-expanded="false" aria-controls="service-content-4" id="service-trigger-4">
+                <div class="flex items-center gap-4 pt-4 sm:pt-5 pb-3">
+                  <span class="text-brand-teal font-mono text-lg sm:text-xl font-bold shrink-0">04</span>
+                  <span class="text-brand-teal font-medium text-lg sm:text-xl">Social Media Management<span class="service-ellipsis opacity-60">…</span></span>
+                </div>
+              </div>
+              <div id="service-content-4" class="service-expanded" role="region" aria-labelledby="service-trigger-4" aria-hidden="true">
+                <div class="service-expanded-inner">
+                  <p class="text-slate-800 text-base sm:text-lg leading-relaxed mb-4">We handle posting, engagement, and optimization so you stay visible without the daily grind.</p>
+                  <ul class="space-y-2 text-slate-700"><li class="flex items-center gap-2"><svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Scheduling & publishing</li><li class="flex items-center gap-2"><svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Performance tracking</li><li class="flex items-center gap-2"><svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Community management</li></ul>
+                </div>
+              </div>
+              <div class="service-line"></div>
+            </article>
+          </div>
+          <div class="flex justify-end mt-8">
+            <a href="services.html" class="inline-flex items-center gap-2 text-brand-dark font-semibold text-base sm:text-lg hover:text-brand-teal transition-colors underline underline-offset-4 whitespace-nowrap">
+              View All Services
+              <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHO THIS IS FOR / NOT FOR -->
+    <section class="section-wrapper">
+      <div class="container-custom">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 lg:gap-16 reveal">
+          <div class="who-card who-card--not rounded-2xl border border-slate-200 bg-white p-8 lg:p-10">
+            <div class="flex items-center gap-4 mb-8">
+              <span class="w-12 h-12 rounded-lg border-2 border-red-400 flex items-center justify-center shrink-0">
+                <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              </span>
+              <h3 class="text-xl font-bold text-slate-900">Who This is not For</h3>
+            </div>
+            <ul class="space-y-5">
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                <span class="text-slate-700">New agents with zero budget for marketing.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                <span class="text-slate-700">Part-time agents treating real estate as a hobby</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                <span class="text-slate-700">Agents looking for &quot;get rich quick&quot; lead schemes.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                <span class="text-slate-700">Anyone unwilling to trust the process for at least 90 days.</span>
+              </li>
+            </ul>
+          </div>
+          <div class="who-card who-card--for rounded-2xl border border-slate-200 bg-white p-8 lg:p-10">
+            <div class="flex items-center gap-4 mb-8">
+              <span class="w-12 h-12 rounded-lg border-2 border-brand-teal flex items-center justify-center shrink-0">
+                <svg class="w-6 h-6 text-brand-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </span>
+              <h3 class="text-xl font-bold text-slate-900">Who This is For</h3>
+            </div>
+            <ul class="space-y-5">
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-slate-700">Agents doing $10M+ volume looking to scale to $30M+</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-slate-700">Realtors tired of cold prospecting who want inbound leads.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-slate-700">Agents ready to invest in their personal brand as an asset</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-slate-700">Those willing to be on camera (with our coaching).</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT VICTOR -->
+    <section class="section-wrapper w-full">
+      <div class="container-custom w-full">
+        <div class="flex flex-col lg:flex-row items-stretch gap-10 sm:gap-12 lg:gap-16 w-full">
+          <div class="w-full lg:w-1/2 flex flex-col justify-center reveal">
+            <span class="section-subheading inline-block px-4 py-2 rounded-full border border-brand-teal-light text-slate-700 mb-6 w-fit">About Victor</span>
+            <h2 class="section-heading text-slate-900 mb-8">Helping Realtors Become Market Leaders</h2>
+            <div class="space-y-6 text-slate-700 text-base lg:text-lg">
+              <p>I help real estate agents, teams, and developers turn properties into clear, compelling brands.</p>
+              <p>My work sits at the intersection of strategy, content, and systems — not just how things look, but how they perform.</p>
+              <p>I design and execute everything from brand positioning and visuals to landing pages, ads, and lead workflows.</p>
+              <p>I don&apos;t chase trends — I build repeatable systems that drive inquiries and close deals.</p>
+            </div>
+            <a href="#book" class="btn-secondary-teal mt-10 w-fit">Book your free consultation</a>
+          </div>
+          <div class="w-full lg:w-1/2 min-h-[280px] sm:min-h-[360px] lg:min-h-[520px] reveal reveal-delay-100">
+            <div class="about-img-wrapper w-full h-full min-h-[280px] sm:min-h-[360px] lg:min-h-[520px] rounded-2xl overflow-hidden flex items-end justify-center lg:justify-end">
+              <img src="images/profile-hero.png" alt="Victor - Real Estate Consultant" class="w-full max-w-full lg:max-w-[85%] h-auto object-cover object-right-bottom object-center grayscale block" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA + FAQ -->
+    <section class="section-wrapper">
+      <div class="container-custom">
+        <h2 class="section-heading text-brand-dark mb-12 reveal">Frequently Asked Questions</h2>
+        <div class="flex flex-col lg:flex-row gap-10 sm:gap-14 lg:gap-24 items-center">
+          <!-- Left: illustration -->
+          <div class="w-full lg:w-1/2 flex justify-center lg:justify-start reveal">
+            <img src="images/FAQs.png" alt="Frequently asked questions" class="w-full max-w-full lg:max-w-md object-contain" loading="lazy" decoding="async">
+          </div>
+          <!-- Right: FAQ accordion cards -->
+          <div class="w-full lg:w-1/2 space-y-4 reveal reveal-delay-100">
+            <details class="faq-card group">
+              <summary class="flex justify-between items-center cursor-pointer list-none font-medium text-brand-dark py-5 px-6">
+                <span>Do I have to dance on TikTok?</span>
+                <span class="faq-chevron text-brand-teal shrink-0 ml-4"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></span>
+              </summary>
+              <div class="faq-content">
+                <div class="faq-content-inner">
+                  <p class="px-6 pb-5 text-slate-600 text-sm">No. We create content that fits your style and brand. You don't need to do viral dance trends unless that's authentically you.</p>
+                </div>
+              </div>
+            </details>
+            <details class="faq-card group">
+              <summary class="flex justify-between items-center cursor-pointer list-none font-medium text-brand-dark py-5 px-6">
+                <span>How much time does this require from me?</span>
+                <span class="faq-chevron text-brand-teal shrink-0 ml-4"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></span>
+              </summary>
+              <div class="faq-content">
+                <div class="faq-content-inner">
+                  <p class="px-6 pb-5 text-slate-600 text-sm">Approximately 4-6 hours per month. We batch film content on a single day, and handle all the editing, posting, and ad management for you.</p>
+                </div>
+              </div>
+            </details>
+            <details class="faq-card group">
+              <summary class="flex justify-between items-center cursor-pointer list-none font-medium text-brand-dark py-5 px-6">
+                <span>Do you work with new agents?</span>
+                <span class="faq-chevron text-brand-teal shrink-0 ml-4"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></span>
+              </summary>
+              <div class="faq-content">
+                <div class="faq-content-inner">
+                  <p class="px-6 pb-5 text-slate-600 text-sm">We generally require agents to have at least 1 year of experience and a marketing budget. Our system amplifies success; it doesn't replace foundational real estate skills.</p>
+                </div>
+              </div>
+            </details>
+            <details class="faq-card group">
+              <summary class="flex justify-between items-center cursor-pointer list-none font-medium text-brand-dark py-5 px-6">
+                <span>What results can I expect?</span>
+                <span class="faq-chevron text-brand-teal shrink-0 ml-4"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></span>
+              </summary>
+              <div class="faq-content">
+                <div class="faq-content-inner">
+                  <p class="px-6 pb-5 text-slate-600 text-sm">While results vary, most clients see a significant increase in engagement within 30 days and start generating qualified conversations within 60 days.</p>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA: Start With A Free Consultation (card, same width as navbar/hero) -->
+    <section id="book" class="section-wrapper">
+      <div class="container-custom">
+        <div class="bg-white rounded-2xl shadow-md p-8 lg:p-12 text-center reveal">
+          <span class="section-subheading inline-block px-4 py-2 rounded-full border border-brand-teal text-brand-teal mb-6">Not Sure Where to Start?</span>
+          <h2 class="section-heading text-brand-dark mb-6">Start With A Free Consultation</h2>
+          <p class="text-slate-600 text-lg max-w-2xl mx-auto mb-10">Stop watching other agents win with social media. Let&apos;s build your brand and fill your pipeline.</p>
+          <a href="#book" class="btn-primary">Book your free consultation</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <div class="container-custom">
+    <hr class="m-0 border-0 border-t border-brand-dark/[0.29]" />
+  </div>
+  <footer class="w-full py-12 lg:py-16 bg-transparent">
+    <div class="container-custom flex flex-col md:flex-row justify-between items-center gap-6">
+      <a href="index.html" class="text-slate-900 font-bold text-xl hover:text-brand-teal transition-colors">VICTOR.</a>
+      <div class="flex gap-8 text-sm text-slate-500">
+        <a href="#" class="hover:text-slate-900 transition-colors">Privacy Policy</a>
+        <a href="#" class="hover:text-slate-900 transition-colors">Terms of Service</a>
+      </div>
+      <p class="text-sm text-slate-500">© 2023 Victor Consulting, All rights reserved</p>
+    </div>
+  </footer>
+
+  <script src="js/animations.js"></script>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const iconMenu = document.getElementById('icon-menu');
+      const iconClose = document.getElementById('icon-close');
+      const isHidden = menu.classList.contains('hidden');
+      if (isHidden) {
+        menu.classList.remove('hidden');
+        menu.setAttribute('aria-hidden', 'false');
+        iconMenu.classList.add('hidden');
+        iconClose.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      } else {
+        menu.classList.add('hidden');
+        menu.setAttribute('aria-hidden', 'true');
+        iconMenu.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+    }
+  </script>
+</body>
+</html>
