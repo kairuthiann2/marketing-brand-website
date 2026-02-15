@@ -13,6 +13,13 @@
   letter-spacing: 0;
 }
 
+/* Pill/tag above headings: vertical center text */
+.section-subheading.inline-flex {
+  line-height: 1;
+  align-items: center;
+  justify-content: center;
+}
+
 .section-heading {
   font-family: Montserrat, ui-sans-serif, system-ui, sans-serif;
   font-weight: 700;
@@ -68,15 +75,30 @@
   }
 }
 
-/* Services section: less top padding (push header up), more bottom padding (push CTA down) */
+/* First section below fixed navbar: consistent top padding on all screen sizes */
+.page-top-padding {
+  padding-top: 120px !important;
+}
+
+@media (min-width: 640px) {
+  .page-top-padding {
+    padding-top: 140px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-top-padding {
+    padding-top: 180px !important;
+  }
+}
+
+/* Services section: extra bottom padding (top padding from page-top-padding) */
 .services-section {
-  padding-top: 48px;
   padding-bottom: 80px;
 }
 
 @media (min-width: 1024px) {
   .services-section {
-    padding-top: 80px;
     padding-bottom: 96px;
   }
 }
@@ -261,6 +283,116 @@ html {
   padding: 1.25rem 0 1.5rem 1rem;
   border-left: 3px solid rgba(19, 150, 159, 0.3);
   margin-left: 0.25rem;
+}
+
+/* Services page: list items + View More/Less toggle */
+.services-list-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.625rem 0;
+  min-height: 2.75rem;
+}
+
+@media (min-width: 640px) {
+  .services-list-item {
+    gap: 1rem;
+    padding: 0.75rem 0;
+    min-height: 3rem;
+  }
+}
+
+.services-list-item > span:last-child {
+  min-width: 0;
+  word-wrap: break-word;
+}
+
+.service-list-line {
+  height: 1px;
+  width: 100%;
+  background: rgba(19, 150, 159, 0.3);
+}
+
+.services-list-wrapper[data-services-list] .services-list-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.services-list-extra {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.services-list-wrapper.is-expanded .services-list-extra {
+  grid-template-rows: 1fr;
+}
+
+.services-list-extra-inner {
+  overflow: hidden;
+}
+
+/* Implementation Timeline - dots + vertical connecting lines */
+.timeline-list {
+  width: 100%;
+}
+
+.timeline-list .timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+
+.timeline-list .timeline-item .timeline-content {
+  padding-top: 2px;
+  min-width: 0;
+  flex: 1;
+}
+
+.timeline-list .timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-list .timeline-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.timeline-list .timeline-marker .timeline-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.timeline-list .timeline-marker .timeline-dot--active {
+  background-color: #13969F;
+}
+
+.timeline-list .timeline-marker .timeline-dot--inactive {
+  background-color: #cbd5e1;
+}
+
+.timeline-list .timeline-marker .timeline-line {
+  width: 1px;
+  min-height: 2.25rem;
+  margin-top: 0.375rem;
+  flex-grow: 1;
+}
+
+.timeline-list .timeline-marker .timeline-line--active {
+  background-color: #13969F;
+}
+
+.timeline-list .timeline-marker .timeline-line--inactive {
+  background-color: #e2e8f0;
+}
+
+.timeline-list .timeline-item:last-child .timeline-line {
+  display: none;
 }
 
 /* FAQ accordion cards - white, rounded, soft shadow */
