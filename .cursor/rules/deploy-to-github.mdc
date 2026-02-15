@@ -1,0 +1,42 @@
+---
+description: Deploy this project to GitHub (kairuthiann2/marketing-brand-website)
+alwaysApply: true
+---
+
+# Deploy to GitHub
+
+When the user asks to push, deploy, or publish this project to GitHub, follow this workflow.
+
+## Remote
+
+- **URL:** `https://github.com/kairuthiann2/marketing-brand-website.git`
+- **Branch:** `main`
+- **Remote name:** `origin`
+
+## Deployment Steps
+
+1. **Build CSS** (required before push — HTML uses `dist/output.css`):
+   ```bash
+   npm run build
+   ```
+
+2. **Stage, commit, push:**
+   ```bash
+   git add .
+   git commit -m "Brief description of changes"
+   git push origin main
+   ```
+
+Use PowerShell-compatible syntax (`;` not `&&` for command chaining in Windows).
+
+## Safe Directory (if Git reports dubious ownership)
+
+```bash
+git config --global --add safe.directory 'C:/CLIENTS PROJECTS/Gabu-personal-brand-website'
+```
+
+## Notes
+
+- Do not commit `node_modules/` (already in `.gitignore`).
+- Commit message should be concise and describe the changes.
+- Full deployment reference: `docs/DEPLOYMENT.md`.
