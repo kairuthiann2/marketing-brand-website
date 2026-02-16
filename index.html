@@ -34,16 +34,16 @@
   </header>
 
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="fixed inset-0 z-40 bg-white pt-32 px-6 pb-6 flex flex-col gap-4 lg:hidden hidden" aria-hidden="true">
-    <a href="index.html" class="text-2xl font-semibold text-slate-900 py-3 border-b border-slate-100" onclick="toggleMenu()">Home</a>
-    <a href="portfolio.html" class="text-2xl font-semibold text-slate-900 py-3 border-b border-slate-100" onclick="toggleMenu()">Our Work</a>
-    <a href="services.html" class="text-2xl font-semibold text-slate-900 py-3 border-b border-slate-100" onclick="toggleMenu()">Services</a>
-    <a href="#book" class="mt-auto btn-primary" onclick="toggleMenu()">Book your free consultation</a>
+  <div id="mobile-menu" class="fixed inset-0 z-40 bg-white pt-48 px-6 pb-6 flex flex-col gap-4 lg:hidden mobile-menu--closed" aria-hidden="true">
+    <a href="index.html" class="text-2xl font-semibold text-slate-900 py-3 border-b border-slate-100" onclick="closeMenuForNavigation()">Home</a>
+    <a href="portfolio.html" class="text-2xl font-semibold text-slate-900 py-3 border-b border-slate-100" onclick="closeMenuForNavigation()">Our Work</a>
+    <a href="services.html" class="text-2xl font-semibold text-slate-900 py-3 border-b border-slate-100" onclick="closeMenuForNavigation()">Services</a>
+    <a href="#book" class="mt-auto btn-primary" onclick="closeMenuForNavigation()">Book your free consultation</a>
   </div>
 
   <main>
     <!-- HERO SECTION -->
-    <section class="section-wrapper page-top-padding pb-16 sm:pb-20 lg:pb-32">
+    <section class="section-wrapper page-top-padding pb-12 sm:pb-16 lg:pb-32">
       <div class="container-custom">
         <div class="grid grid-cols-12 gap-8 sm:gap-12 lg:gap-24 items-center">
           <div class="col-span-12 lg:col-span-6 space-y-8 reveal">
@@ -411,7 +411,7 @@
       <div class="container-custom">
         <div class="reveal">
           <div class="text-center mb-8 lg:mb-10">
-            <span class="section-subheading inline-block px-4 py-2 rounded-full border border-brand-teal text-brand-teal">Services</span>
+            <span class="section-subheading inline-block px-4 py-2 rounded-full border border-brand-teal bg-white text-slate-700">Services</span>
             <h2 class="section-heading text-slate-900 mt-4 sm:mt-6">The Complete Authority package</h2>
           </div>
           <div class="service-entries text-left space-y-8 sm:space-y-10" data-service-entries>
@@ -551,7 +551,7 @@
       <div class="container-custom w-full">
         <div class="flex flex-col lg:flex-row items-stretch gap-10 sm:gap-12 lg:gap-16 w-full">
           <div class="w-full lg:w-1/2 flex flex-col justify-center reveal">
-            <span class="section-subheading inline-block px-4 py-2 rounded-full border border-brand-teal-light text-slate-700 mb-6 w-fit">About Victor</span>
+            <span class="section-subheading inline-block px-4 py-2 rounded-full border border-brand-teal-light bg-white text-slate-700 mb-6 w-fit">About Victor</span>
             <h2 class="section-heading text-slate-900 mb-8">Helping Realtors Become Market Leaders</h2>
             <div class="space-y-6 text-slate-700 text-base lg:text-lg">
               <p>I help real estate agents, teams, and developers turn properties into clear, compelling brands.</p>
@@ -664,20 +664,30 @@
       const menu = document.getElementById('mobile-menu');
       const iconMenu = document.getElementById('icon-menu');
       const iconClose = document.getElementById('icon-close');
-      const isHidden = menu.classList.contains('hidden');
-      if (isHidden) {
-        menu.classList.remove('hidden');
+      const isClosed = menu.classList.contains('mobile-menu--closed');
+      if (isClosed) {
+        menu.classList.remove('mobile-menu--closed', 'mobile-menu--instant-close');
         menu.setAttribute('aria-hidden', 'false');
         iconMenu.classList.add('hidden');
         iconClose.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
       } else {
-        menu.classList.add('hidden');
+        menu.classList.add('mobile-menu--closed');
         menu.setAttribute('aria-hidden', 'true');
         iconMenu.classList.remove('hidden');
         iconClose.classList.add('hidden');
         document.body.style.overflow = '';
       }
+    }
+    function closeMenuForNavigation() {
+      const menu = document.getElementById('mobile-menu');
+      const iconMenu = document.getElementById('icon-menu');
+      const iconClose = document.getElementById('icon-close');
+      menu.classList.add('mobile-menu--instant-close', 'mobile-menu--closed');
+      menu.setAttribute('aria-hidden', 'true');
+      iconMenu.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+      document.body.style.overflow = '';
     }
   </script>
 </body>

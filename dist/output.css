@@ -793,10 +793,6 @@ video {
   aspect-ratio: 16 / 9;
 }
 
-.h-1\.5 {
-  height: 0.375rem;
-}
-
 .h-12 {
   height: 3rem;
 }
@@ -851,10 +847,6 @@ video {
 
 .min-h-\[340px\] {
   min-height: 340px;
-}
-
-.w-1\.5 {
-  width: 0.375rem;
 }
 
 .w-12 {
@@ -968,6 +960,10 @@ video {
 
 .flex-col {
   flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .items-start {
@@ -1201,6 +1197,11 @@ video {
   background-color: rgb(226 232 240 / var(--tw-bg-opacity, 1));
 }
 
+.bg-slate-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 41 59 / var(--tw-bg-opacity, 1));
+}
+
 .bg-transparent {
   background-color: transparent;
 }
@@ -1242,6 +1243,11 @@ video {
   padding: 2rem;
 }
 
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1260,11 +1266,6 @@ video {
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-}
-
-.py-24 {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
 }
 
 .py-3 {
@@ -1294,12 +1295,8 @@ video {
   padding-bottom: 2.5rem;
 }
 
-.pb-16 {
-  padding-bottom: 4rem;
-}
-
-.pb-24 {
-  padding-bottom: 6rem;
+.pb-12 {
+  padding-bottom: 3rem;
 }
 
 .pb-3 {
@@ -1334,16 +1331,12 @@ video {
   padding-top: 0px;
 }
 
-.pt-24 {
-  padding-top: 6rem;
-}
-
-.pt-32 {
-  padding-top: 8rem;
-}
-
 .pt-4 {
   padding-top: 1rem;
+}
+
+.pt-48 {
+  padding-top: 12rem;
 }
 
 .pt-6 {
@@ -1501,6 +1494,10 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
+.text-white\/60 {
+  color: rgb(255 255 255 / 0.6);
+}
+
 .underline {
   text-decoration-line: underline;
 }
@@ -1561,6 +1558,10 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 .transition-colors {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1568,6 +1569,31 @@ video {
 }
 
 /* Reusable components - matches Tailwind config */
+
+/* Back / Next nav links (after CTA, after services list) */
+
+.nav-prev-next {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-prev-next-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #0f172a;
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 0.2s;
+}
+
+.nav-prev-next-link:hover {
+  color: #13969f;
+}
 
 /* Section typography - Headlines: Montserrat (bold, modern) | Body: Inter (clean, readable) */
 
@@ -1634,9 +1660,18 @@ video {
   }
 }
 
+/* Phone: 48px padding, 96px gap between sections | Tablet+: 64px padding, 128px gap */
+
 .section-wrapper {
-  padding-top: 64px;
-  padding-bottom: 64px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+@media (min-width: 640px) {
+  .section-wrapper {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -1666,8 +1701,16 @@ video {
 
 /* Services section: extra bottom padding (top padding from page-top-padding) */
 
+/* Phone: 48px for 96px gap | Tablet: 80px for 144px gap after Services | Desktop: 96px */
+
 .services-section {
-  padding-bottom: 80px;
+  padding-bottom: 48px;
+}
+
+@media (min-width: 640px) {
+  .services-section {
+    padding-bottom: 80px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -1817,6 +1860,149 @@ video {
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 200px;
+}
+
+/* Portfolio work page: first section cards (same width as navbar via container-custom) */
+
+/* Left card: white mat frame + inner dark placeholder (landscape) */
+
+.portfolio-card-left-mat {
+  background: white;
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.05), 0 1px 2px -1px rgb(0 0 0 / 0.05);
+}
+
+.portfolio-card-left-inner {
+  aspect-ratio: 4 / 3;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #374151;
+}
+
+.portfolio-card-left-inner img {
+  display: block;
+}
+
+/* Right card: beige border, teal accent top-right, video placeholder (portrait) */
+
+.portfolio-card-right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.portfolio-card-right-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.portfolio-card-right-frame {
+  position: relative;
+  border: 8px solid #EDE6DC;
+  border-radius: 16px;
+  overflow: visible;
+  background: white;
+  box-shadow: none !important;
+}
+
+.portfolio-card-right-accent {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 48px;
+  height: 48px;
+  background: #13969F;
+  border-radius: 12px;
+  z-index: 2;
+}
+
+.portfolio-card-right-media {
+  position: relative;
+  aspect-ratio: 9 / 16;
+  max-height: 420px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: none !important;
+}
+
+@media (min-width: 640px) {
+  .portfolio-card-left-mat {
+    padding: 16px;
+  }
+
+  .portfolio-card-right-accent {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .portfolio-card-right-accent {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+/* Reusable content carousel - film-strip pattern (same as testimonial) */
+
+.content-carousel-viewport {
+  overflow: hidden;
+  position: relative;
+}
+
+[data-content-carousel-track] {
+  display: flex;
+  will-change: transform;
+  transition: transform 700ms cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+[data-content-carousel-slide] {
+  flex-shrink: 0;
+  min-width: 0;
+}
+
+.content-carousel-tab {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #475569;
+  transition: color 0.25s ease;
+  padding: 0;
+}
+
+.content-carousel-tab:hover {
+  color: #13969F;
+}
+
+.content-carousel-tab--active {
+  color: #13969F;
+  font-weight: 600;
+}
+
+/* Category-level tabs: pill style (Content system | Design) - same radius as secondary CTAs (12px) */
+
+.content-carousel-tab--pill {
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+  background: white;
+  color: #475569;
+}
+
+.content-carousel-tab--pill:hover {
+  border-color: #13969F;
+  color: #13969F;
+}
+
+.content-carousel-tab--pill.content-carousel-tab--active {
+  border-color: #13969F;
+  background: rgba(19, 150, 159, 0.12);
+  color: #334155;
 }
 
 /* Services section - expandable entries, ellipsis inside low-opacity line */
@@ -2037,6 +2223,31 @@ button:focus-visible {
   box-shadow: 0 0 0 2px #13969F;
 }
 
+/* Mobile menu - slide + fade (400ms, same easing as FAQ/service expand) */
+
+#mobile-menu {
+  transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1),
+              transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#mobile-menu.mobile-menu--closed {
+  opacity: 0;
+  transform: translateX(100%);
+  pointer-events: none;
+}
+
+#mobile-menu:not(.mobile-menu--closed) {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Quick close when nav link is clicked (shorter than X-button close) */
+
+#mobile-menu.mobile-menu--instant-close {
+  transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1),
+              transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* Testimonial carousel - smooth, soothing slide with refined easing */
 
 [data-testimonial-track] {
@@ -2229,6 +2440,10 @@ img {
 }
 
 @media (min-width: 640px) {
+  .sm\:mb-8 {
+    margin-bottom: 2rem;
+  }
+
   .sm\:mt-16 {
     margin-top: 4rem;
   }
@@ -2299,8 +2514,8 @@ img {
     padding-bottom: 3.5rem;
   }
 
-  .sm\:pb-20 {
-    padding-bottom: 5rem;
+  .sm\:pb-16 {
+    padding-bottom: 4rem;
   }
 
   .sm\:pl-6 {
@@ -2434,6 +2649,10 @@ img {
     justify-content: flex-end;
   }
 
+  .lg\:gap-10 {
+    gap: 2.5rem;
+  }
+
   .lg\:gap-14 {
     gap: 3.5rem;
   }
@@ -2467,11 +2686,6 @@ img {
   .lg\:py-16 {
     padding-top: 4rem;
     padding-bottom: 4rem;
-  }
-
-  .lg\:py-32 {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
   }
 
   .lg\:pb-0 {
