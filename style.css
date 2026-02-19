@@ -960,6 +960,15 @@ img {
   transform: scale(1.02);
   box-shadow: 0 8px 24px rgba(26, 57, 59, 0.25);
 }
+.booking-submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+.booking-submit-btn:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
 .booking-success-message {
   display: none;
   text-align: center;

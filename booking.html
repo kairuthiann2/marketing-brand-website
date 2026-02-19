@@ -276,12 +276,27 @@
                   </div>
                 </div>
 
-                <!-- Step 5: Calendly + Submit (footer button becomes Submit) -->
-                <div class="booking-step booking-step-5" data-step="5">
+                <!-- Step 5: Intro - "Next" reveals Calendly -->
+                <div class="booking-step" data-step="5">
+                  <div class="booking-form-section">
+                    <h2 class="booking-section-title">Almost There!</h2>
+                    <p class="booking-section-subtitle">Click Next to pick your consultation date and time. Then submit your application.</p>
+                    <div class="text-center py-8">
+                      <svg class="w-16 h-16 mx-auto text-brand-teal mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                      </svg>
+                      <p class="text-slate-600">You&apos;ll choose a time that works for you in the next step.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Step 6: Calendly + Submit (Submit disabled until user picks time) -->
+                <div class="booking-step booking-step-6" data-step="6">
                   <div class="booking-form-section">
                     <h2 class="booking-section-title">Pick Your Time</h2>
-                    <p class="booking-section-subtitle">Choose a slot that works for you. Then click Submit Application below.</p>
-                    <div id="calendlyContainer" style="min-width:320px;height:630px;"></div>
+                    <p class="booking-section-subtitle">Choose a slot below. The Submit button will activate once you&apos;ve selected your consultation time.</p>
+                    <div id="calendlyContainer" class="calendly-inline-widget" style="min-width:320px;height:630px;"></div>
+                    <button type="submit" id="bookingSubmitBtn" class="booking-submit-btn mt-6" disabled>Submit Application →</button>
                   </div>
                 </div>
 
@@ -294,6 +309,7 @@
                     <span class="booking-stepper-dot" data-step-dot="3"></span>
                     <span class="booking-stepper-dot" data-step-dot="4"></span>
                     <span class="booking-stepper-dot" data-step-dot="5"></span>
+                    <span class="booking-stepper-dot" data-step-dot="6"></span>
                   </div>
                   <button type="button" class="booking-wizard-next" id="wizardNext">Next</button>
                 </div>

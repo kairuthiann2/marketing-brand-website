@@ -1287,6 +1287,11 @@ video {
   padding-bottom: 1.25rem;
 }
 
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 .\!pb-8 {
   padding-bottom: 2rem !important;
 }
@@ -2616,6 +2621,17 @@ img {
 .booking-submit-btn:hover {
   transform: scale(1.02);
   box-shadow: 0 8px 24px rgba(26, 57, 59, 0.25);
+}
+
+.booking-submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.booking-submit-btn:disabled:hover {
+  transform: none;
+  box-shadow: none;
 }
 
 .booking-success-message {

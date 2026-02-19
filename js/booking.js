@@ -1,17 +1,17 @@
 /**
- * Booking page: 5-step wizard with progressive disclosure.
- * Steps 1-4: Form sections. Step 5: Calendly + Submit.
- * Footer: Back | Stepper | Next (or Submit on step 5).
+ * Booking page: 6-step wizard.
+ * Steps 1-4: Form. Step 5: Intro. Step 6: Calendly + Submit.
+ * Submit disabled until user schedules in Calendly (event_scheduled).
  */
 (function () {
-  var TOTAL_STEPS = 5;
+  var TOTAL_STEPS = 6;
   var form = document.getElementById('intakeForm');
   var wizard = document.getElementById('bookingWizard');
-  var footer = document.getElementById('wizardFooter');
   var backBtn = document.getElementById('wizardBack');
   var nextBtn = document.getElementById('wizardNext');
   var stepper = document.getElementById('wizardStepper');
   var successEl = document.getElementById('bookingSuccess');
+  var submitBtn = document.getElementById('bookingSubmitBtn');
 
   if (!form || !wizard) return;
 
@@ -20,27 +20,40 @@
 
   function initCalendlyWidget() {
     if (calendlyInitialized) return;
-    var container = document.getElementById('calendlyContainer');
+    var container = document.querySelector('.calendly-inline-widget') || document.getElementById('calendlyContainer');
     if (!container) return;
     if (window.Calendly && window.Calendly.initInlineWidget) {
+      var prefill = {};
+      try {
+        var nameVal = form.querySelector('[name="name"]');
+        var emailVal = form.querySelector('[name="email"]');
+        var phoneVal = form.querySelector('[name="phone"]');
+        if (nameVal && nameVal.value) prefill.name = nameVal.value;
+        if (emailVal && emailVal.value) prefill.email = emailVal.value;
+        if (phoneVal && phoneVal.value) prefill.customAnswers = { a1: phoneVal.value };
+      } catch (e) { /* ignore */ }
       window.Calendly.initInlineWidget({
         url: 'https://calendly.com/marketingvictor/free-discovery-call?hide_gdpr_banner=1&primary_color=1a393b',
-        parentElement: container
+        parentElement: container,
+        prefill: prefill
       });
       calendlyInitialized = true;
+      listenForCalendlyScheduled();
     } else {
       setTimeout(initCalendlyWidget, 150);
     }
   }
 
-  function getStepEl(step) {
-    return form.querySelector('.booking-step[data-step="' + step + '"]');
+  function listenForCalendlyScheduled() {
+    window.addEventListener('message', function (e) {
+      if (e.data && e.data.event === 'calendly.event_scheduled' && submitBtn) {
+        submitBtn.disabled = false;
+      }
+    });
   }
 
-  function getRequiredInStep(step) {
-    var el = getStepEl(step);
-    if (!el) return [];
-    return el.querySelectorAll('[required]');
+  function getStepEl(step) {
+    return form.querySelector('.booking-step[data-step="' + step + '"]');
   }
 
   function validateStep(step) {
@@ -73,7 +86,6 @@
     if (nextEl) nextEl.classList.add('is-active');
     currentStep = step;
 
-    // Stepper dots
     var dots = stepper.querySelectorAll('.booking-stepper-dot');
     dots.forEach(function (dot, i) {
       var dotStep = i + 1;
@@ -82,14 +94,11 @@
       else if (dotStep === step) dot.classList.add('is-active');
     });
 
-    // Back button
     backBtn.disabled = step === 1;
 
-    // Next vs Submit (same button position)
     if (step === TOTAL_STEPS) {
-      nextBtn.style.display = 'inline-flex';
-      nextBtn.textContent = 'Submit Application →';
-      nextBtn.type = 'submit';
+      nextBtn.style.display = 'none';
+      if (submitBtn) submitBtn.disabled = true;
       requestAnimationFrame(function () { initCalendlyWidget(); });
     } else {
       nextBtn.style.display = 'inline-flex';
@@ -107,7 +116,8 @@
   nextBtn.addEventListener('click', function () {
     if (currentStep < TOTAL_STEPS) {
       if (!validateStep(currentStep)) {
-        getStepEl(currentStep).querySelector('[required]')?.focus();
+        var first = getStepEl(currentStep).querySelector('[required]');
+        if (first) first.focus();
         return;
       }
       goToStep(currentStep + 1);
@@ -116,6 +126,7 @@
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
+    if (submitBtn && submitBtn.disabled) return;
 
     var formData = new FormData(form);
     var data = {};
