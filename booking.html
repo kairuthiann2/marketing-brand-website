@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Free Consultation | Victor — Real Estate Brand Strategy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dist/output.css">
+</head>
+<body class="font-sans text-slate-700 bg-beige antialiased overflow-x-hidden">
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 left-0 right-0 z-50 pt-4">
+    <div class="container-custom">
+      <nav class="bg-white rounded-2xl shadow-md px-6 lg:px-8 h-[88px] flex items-center justify-between">
+        <a href="index.html" class="text-xl font-bold text-brand-dark hover:text-brand-teal transition-colors">Victor.</a>
+        <div class="hidden lg:flex items-center justify-center flex-1 gap-8">
+          <a href="portfolio.html" class="text-sm font-medium text-slate-600 hover:text-brand-dark transition-colors">Our Work</a>
+          <a href="services.html" class="text-sm font-medium text-slate-600 hover:text-brand-dark transition-colors">Services</a>
+        </div>
+        <div class="hidden lg:flex items-center">
+          <a href="booking.html#intakeForm" class="btn-nav-cta">Book your free consultation</a>
+        </div>
+        <button type="button" onclick="toggleMenu()" class="lg:hidden p-2 text-slate-600 hover:bg-slate-100 rounded-lg" aria-label="Toggle menu">
+          <svg id="icon-menu" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="icon-close" class="hidden w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed inset-0 z-40 bg-white pt-48 px-6 pb-6 flex flex-col gap-4 lg:hidden mobile-menu--closed" aria-hidden="true">
+    <a href="index.html" class="text-2xl font-semibold text-slate-900 py-3 border-b border-slate-100" onclick="closeMenuForNavigation()">Home</a>
+    <a href="portfolio.html" class="text-2xl font-semibold text-slate-900 py-3 border-b border-slate-100" onclick="closeMenuForNavigation()">Our Work</a>
+    <a href="services.html" class="text-2xl font-semibold text-slate-900 py-3 border-b border-slate-100" onclick="closeMenuForNavigation()">Services</a>
+    <a href="booking.html" class="mt-auto btn-primary" onclick="closeMenuForNavigation()">Book your free consultation</a>
+  </div>
+
+  <main>
+    <section class="section-wrapper page-top-padding pb-12 sm:pb-16 lg:pb-24">
+      <div class="container-custom">
+        <!-- Header -->
+        <div class="text-center mb-12 lg:mb-16 reveal">
+          <span class="section-subheading inline-block px-4 py-2 rounded-full border border-brand-teal bg-white text-slate-700 mb-6">Strategy Call Application</span>
+          <h1 class="section-heading text-brand-dark mb-4">Tell Me About Your Business</h1>
+          <p class="text-slate-600 text-lg max-w-2xl mx-auto">This takes about 3 minutes. The more detail you provide, the better I can help you on our call.</p>
+        </div>
+
+        <!-- Two-column: Illustration left | Wizard card right -->
+        <div class="flex flex-col lg:flex-row gap-10 sm:gap-14 lg:gap-24 items-start">
+          <!-- Left: Illustration -->
+          <div class="w-full lg:w-1/2 flex justify-center lg:justify-start lg:sticky lg:top-36 reveal">
+            <img src="images/FAQs.png" alt="Consultation" class="w-full max-w-md lg:max-w-full object-contain" loading="eager" decoding="async">
+          </div>
+
+          <!-- Right: Wizard card -->
+          <div class="w-full lg:w-1/2 reveal reveal-delay-100">
+            <div id="bookingWizard" class="booking-wizard-card">
+              <form id="intakeForm">
+                <!-- Step 1: Contact -->
+                <div class="booking-step is-active" data-step="1">
+                  <div class="booking-form-section">
+                    <h2 class="booking-section-title">Contact Information</h2>
+                    <p class="booking-section-subtitle">So I can get back to you</p>
+                    <div class="booking-form-group">
+                      <label class="booking-form-label">Full Name<span class="required">*</span></label>
+                      <input type="text" name="name" class="booking-form-input" required placeholder="Jane Smith">
+                    </div>
+                    <div class="booking-form-group">
+                      <label class="booking-form-label">Email<span class="required">*</span></label>
+                      <input type="email" name="email" class="booking-form-input" required placeholder="jane@example.com">
+                    </div>
+                    <div class="booking-form-group">
+                      <label class="booking-form-label">Phone Number<span class="required">*</span></label>
+                      <input type="tel" name="phone" class="booking-form-input" required placeholder="(555) 123-4567">
+                    </div>
+                    <div class="booking-form-group">
+                      <label class="booking-form-label">Instagram Handle</label>
+                      <span class="booking-form-sublabel">So I can check out your current content</span>
+                      <input type="text" name="instagram" class="booking-form-input" placeholder="@yourhandle">
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Step 2: Business -->
+                <div class="booking-step" data-step="2">
+                  <div class="booking-form-section">
+                    <h2 class="booking-section-title">Your Business</h2>
+                    <p class="booking-section-subtitle">Tell me about where you are right now</p>
+                    <div class="booking-form-group">
+                      <label class="booking-form-label">What market do you serve?<span class="required">*</span></label>
+                      <span class="booking-form-sublabel">City, region, or neighborhood</span>
+                      <input type="text" name="market" class="booking-form-input" required placeholder="e.g., Austin, TX">
+                    </div>
+                    <div class="booking-form-group">
+                      <label class="booking-form-label">How many transactions did you close last year?<span class="required">*</span></label>
+                      <span class="booking-form-sublabel">Ballpark is fine — this helps me understand your volume</span>
+                      <select name="transactions" class="booking-form-select" required>
+                        <option value="">Select range...</option>
+                        <option value="0-5">0-5 transactions</option>
+                        <option value="6-12">6-12 transactions</option>
+                        <option value="13-24">13-24 transactions</option>
+                        <option value="25-50">25-50 transactions</option>
+                        <option value="50+">50+ transactions</option>
+                      </select>
+                    </div>
+                    <div class="booking-form-group">
+                      <label class="booking-form-label">What's your average sale price?<span class="required">*</span></label>
+                      <span class="booking-form-sublabel">Again, rough estimate is totally fine</span>
+                      <select name="avg_price" class="booking-form-select" required>
+                        <option value="">Select range...</option>
+                        <option value="under-200k">Under $200K</option>
+                        <option value="200k-400k">$200K - $400K</option>
+                        <option value="400k-700k">$400K - $700K</option>
+                        <option value="700k-1m">$700K - $1M</option>
+                        <option value="1m+">$1M+</option>
+                      </select>
+                    </div>
+                    <div class="booking-form-group">
+                      <label class="booking-form-label">How long have you been licensed?<span class="required">*</span></label>
+                      <select name="experience" class="booking-form-select" required>
+                        <option value="">Select...</option>
+                        <option value="0-1">Less than 1 year</option>
+                        <option value="1-3">1-3 years</option>
+                        <option value="3-5">3-5 years</option>
+                        <option value="5-10">5-10 years</option>
+                        <option value="10+">10+ years</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Step 3: Social Media -->
+                <div class="booking-step" data-step="3">
+                  <div class="booking-form-section">
+                    <h2 class="booking-section-title">Your Social Media Right Now</h2>
+                    <p class="booking-section-subtitle">Where are you starting from?</p>
+                    <div class="booking-form-group">
+                      <label class="booking-form-label">Are you currently posting on Instagram?<span class="required">*</span></label>
+                      <div class="booking-radio-group">
+                        <label class="booking-radio-option">
+                          <input type="radio" name="currently_posting" value="yes-consistently" required>
+                          <span>Yes, consistently (3+ times per week)</span>
+                        </label>
+                        <label class="booking-radio-option">
+                          <input type="radio" name="currently_posting" value="yes-sporadically" required>
+                          <span>Yes, but sporadically (once a week or less)</span>
+                        </label>
+                        <label class="booking-radio-option">
+                          <input type="radio" name="currently_posting" value="no-not-yet" required>
+                          <span>No, not yet / barely started</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="booking-form-group">
+                      <label class="booking-form-label">How many followers do you have right now?</label>
+                      <input type="text" name="followers" class="booking-form-input" placeholder="e.g., 300">
+                    </div>
+                    <div class="booking-form-group">
+                      <label class="booking-form-label">What's your biggest struggle with social media?<span class="required">*</span></label>
+                      <span class="booking-form-sublabel">Be honest — this helps me tailor our call</span>
+                      <textarea name="struggle" class="booking-form-textarea" required placeholder="e.g., I don't know what to post, I'm inconsistent..."></textarea>
+                    </div>
+                    <div class="booking-form-group">
+                      <label class="booking-form-label">Which services are you interested in?<span class="required">*</span></label>
+                      <div class="booking-checkbox-group">
+                        <label class="booking-checkbox-option">
+                          <input type="checkbox" name="services" value="content-strategy">
+                          <span><strong>Content Strategy</strong> — What to post, when, and how to structure your calendar</span>
+                        </label>
+                        <label class="booking-checkbox-option">
+                          <input type="checkbox" name="services" value="full-management">
+                          <span><strong>Full Social Media Management</strong> — I create, post, and manage everything for you</span>
+                        </label>
+                        <label class="booking-checkbox-option">
+                          <input type="checkbox" name="services" value="coaching">
+                          <span><strong>1-on-1 Coaching</strong> — Regular calls to review your content and optimize</span>
+                        </label>
+                        <label class="booking-checkbox-option">
+                          <input type="checkbox" name="services" value="ad-campaigns">
+                          <span><strong>Paid Ad Campaigns</strong> — Instagram/Facebook ads to accelerate growth</span>
+                        </label>
+                        <label class="booking-checkbox-option">
+                          <input type="checkbox" name="services" value="not-sure">
+                          <span><strong>Not sure yet</strong> — I want to explore what makes sense</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Step 4: Budget, Timeline, Goals -->
+                <div class="booking-step" data-step="4">
+                  <div class="booking-form-section">
+                    <h2 class="booking-section-title">Investment &amp; Goals</h2>
+                    <p class="booking-section-subtitle">What does success look like?</p>
+                    <div class="booking-form-group">
+                      <label class="booking-form-label">What's your monthly budget?<span class="required">*</span></label>
+                      <div class="booking-budget-grid">
+                        <label class="booking-budget-option">
+                          <input type="radio" name="budget" value="under-500" required>
+                          <div class="booking-budget-card">
+                            <span class="amount">&lt; $500</span>
+                            <span class="label">Getting started</span>
+                          </div>
+                        </label>
+                        <label class="booking-budget-option">
+                          <input type="radio" name="budget" value="500-1000" required>
+                          <div class="booking-budget-card">
+                            <span class="amount">$500-1K</span>
+                            <span class="label">Strategy focus</span>
+                          </div>
+                        </label>
+                        <label class="booking-budget-option">
+                          <input type="radio" name="budget" value="1000-2000" required>
+                          <div class="booking-budget-card">
+                            <span class="amount">$1K-2K</span>
+                            <span class="label">Partial management</span>
+                          </div>
+                        </label>
+                        <label class="booking-budget-option">
+                          <input type="radio" name="budget" value="2000-4000" required>
+                          <div class="booking-budget-card">
+                            <span class="amount">$2K-4K</span>
+                            <span class="label">Full service</span>
+                          </div>
+                        </label>
+                        <label class="booking-budget-option">
+                          <input type="radio" name="budget" value="4000+" required>
+                          <div class="booking-budget-card">
+                            <span class="amount">$4K+</span>
+                            <span class="label">Premium</span>
+                          </div>
+                        </label>
+                        <label class="booking-budget-option">
+                          <input type="radio" name="budget" value="flexible" required>
+                          <div class="booking-budget-card">
+                            <span class="amount">Flexible</span>
+                            <span class="label">Let's discuss</span>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="booking-form-group">
+                      <label class="booking-form-label">When do you want to get started?<span class="required">*</span></label>
+                      <select name="timeline" class="booking-form-select" required>
+                        <option value="">Select...</option>
+                        <option value="asap">ASAP (within 2 weeks)</option>
+                        <option value="1-month">Within the next month</option>
+                        <option value="1-3-months">1-3 months</option>
+                        <option value="exploring">Just exploring for now</option>
+                      </select>
+                    </div>
+                    <div class="booking-form-group">
+                      <label class="booking-form-label">What's your #1 goal?<span class="required">*</span></label>
+                      <textarea name="goal" class="booking-form-textarea" required placeholder="e.g., Generate 5+ qualified leads per month..."></textarea>
+                    </div>
+                    <div class="booking-form-group">
+                      <label class="booking-form-label">Anything else I should know?</label>
+                      <textarea name="additional" class="booking-form-textarea" placeholder="Optional"></textarea>
+                    </div>
+                    <div class="booking-form-group">
+                      <label class="booking-form-label">How did you find me?</label>
+                      <select name="referral" class="booking-form-select">
+                        <option value="">Select...</option>
+                        <option value="instagram">Instagram</option>
+                        <option value="lead-magnet">Downloaded free blueprint</option>
+                        <option value="referral">Referral</option>
+                        <option value="google">Google search</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Step 5: Calendly + Submit (footer button becomes Submit) -->
+                <div class="booking-step booking-step-5" data-step="5">
+                  <div class="booking-form-section">
+                    <h2 class="booking-section-title">Pick Your Time</h2>
+                    <p class="booking-section-subtitle">Choose a slot that works for you. Then click Submit Application below.</p>
+                    <div id="calendlyContainer" style="min-width:320px;height:630px;"></div>
+                  </div>
+                </div>
+
+                <!-- Wizard footer: Back | Stepper | Next -->
+                <div class="booking-wizard-footer" id="wizardFooter">
+                  <button type="button" class="booking-wizard-back" id="wizardBack" aria-label="Previous step">← Back</button>
+                  <div class="booking-stepper" id="wizardStepper" role="tablist" aria-label="Form progress">
+                    <span class="booking-stepper-dot is-active" data-step-dot="1" aria-current="step"></span>
+                    <span class="booking-stepper-dot" data-step-dot="2"></span>
+                    <span class="booking-stepper-dot" data-step-dot="3"></span>
+                    <span class="booking-stepper-dot" data-step-dot="4"></span>
+                    <span class="booking-stepper-dot" data-step-dot="5"></span>
+                  </div>
+                  <button type="button" class="booking-wizard-next" id="wizardNext">Next</button>
+                </div>
+              </form>
+
+              <!-- Success state (after submit) -->
+              <div id="bookingSuccess" class="booking-success-message" style="display:none;">
+                <div class="booking-success-icon">✓</div>
+                <h2 class="booking-success-title">You're All Set!</h2>
+                <p class="booking-success-text">Thanks for your application. Check your email for confirmation. I look forward to our call.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <div class="container-custom">
+    <hr class="m-0 border-0 border-t border-brand-dark/[0.29]" />
+  </div>
+  <footer class="w-full py-12 lg:py-16 bg-transparent">
+    <div class="container-custom flex flex-col md:flex-row justify-between items-center gap-6">
+      <a href="index.html" class="text-slate-900 font-bold text-xl hover:text-brand-teal transition-colors">VICTOR.</a>
+      <div class="flex gap-8 text-sm text-slate-500">
+        <a href="#" class="hover:text-slate-900 transition-colors">Privacy Policy</a>
+        <a href="#" class="hover:text-slate-900 transition-colors">Terms of Service</a>
+      </div>
+      <p class="text-sm text-slate-500">© 2023 Victor Consulting, All rights reserved</p>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <script src="js/animations.js"></script>
+  <script src="js/booking.js"></script>
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById('mobile-menu');
+      var iconMenu = document.getElementById('icon-menu');
+      var iconClose = document.getElementById('icon-close');
+      var isClosed = menu.classList.contains('mobile-menu--closed');
+      if (isClosed) {
+        menu.classList.remove('mobile-menu--closed', 'mobile-menu--instant-close');
+        menu.setAttribute('aria-hidden', 'false');
+        iconMenu.classList.add('hidden');
+        iconClose.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      } else {
+        menu.classList.add('mobile-menu--closed');
+        menu.setAttribute('aria-hidden', 'true');
+        iconMenu.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+    }
+    function closeMenuForNavigation() {
+      var menu = document.getElementById('mobile-menu');
+      var iconMenu = document.getElementById('icon-menu');
+      var iconClose = document.getElementById('icon-close');
+      menu.classList.add('mobile-menu--instant-close', 'mobile-menu--closed');
+      menu.setAttribute('aria-hidden', 'true');
+      iconMenu.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+  </script>
+</body>
+</html>
