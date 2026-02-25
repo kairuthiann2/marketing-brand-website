@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VIGNETTE Brand Identity Guidelines | Victor — Selected Work</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dist/output.css">
+</head>
+<body class="font-sans text-slate-700 bg-beige antialiased overflow-x-hidden">
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 left-0 right-0 z-50 pt-4">
+    <div class="container-custom">
+      <nav class="bg-white rounded-2xl shadow-md px-6 lg:px-8 h-[88px] flex items-center justify-between">
+        <a href="index.html" class="text-xl font-bold text-brand-dark hover:text-brand-teal transition-colors">Victor.</a>
+        <div class="hidden lg:flex items-center justify-center flex-1 gap-8">
+          <a href="portfolio.html" class="text-sm font-medium text-slate-600 hover:text-brand-dark transition-colors">Our Work</a>
+          <a href="services.html" class="text-sm font-medium text-slate-600 hover:text-brand-dark transition-colors">Services</a>
+        </div>
+        <div class="hidden lg:flex items-center">
+          <a href="booking.html" class="btn-nav-cta">Book your free consultation</a>
+        </div>
+        <button type="button" onclick="toggleMenu()" class="lg:hidden p-2 text-slate-600 hover:bg-slate-100 rounded-lg" aria-label="Toggle menu">
+          <svg id="icon-menu" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="icon-close" class="hidden w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed inset-0 z-40 bg-white pt-48 px-6 pb-6 flex flex-col gap-4 lg:hidden mobile-menu--closed" aria-hidden="true">
+    <a href="index.html" class="text-2xl font-semibold text-slate-900 py-3 border-b border-slate-100" onclick="closeMenuForNavigation()">Home</a>
+    <a href="portfolio.html" class="text-2xl font-semibold text-slate-900 py-3 border-b border-slate-100" onclick="closeMenuForNavigation()">Our Work</a>
+    <a href="services.html" class="text-2xl font-semibold text-slate-900 py-3 border-b border-slate-100" onclick="closeMenuForNavigation()">Services</a>
+    <a href="booking.html" class="mt-auto btn-primary" onclick="closeMenuForNavigation()">Book your free consultation</a>
+  </div>
+
+  <main>
+    <!-- Breadcrumb -->
+    <section class="page-top-padding pt-8 pb-4">
+      <div class="container-custom">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol class="flex flex-wrap items-center gap-2 text-sm text-slate-500">
+            <li><a href="portfolio.html#design" class="breadcrumb-link hover:text-slate-900 transition-colors">Design</a></li>
+            <li aria-hidden="true">/</li>
+            <li><a href="portfolio.html#design-digital" class="breadcrumb-link hover:text-slate-900 transition-colors">Brand Guidelines</a></li>
+            <li aria-hidden="true">/</li>
+            <li class="text-slate-900 font-medium" aria-current="page">Vignette</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Hero Block -->
+    <section class="pb-12 sm:pb-16">
+      <div class="container-custom">
+        <div class="bg-white rounded-2xl shadow-md p-8 sm:p-12 lg:p-16 relative">
+          <picture>
+            <source srcset="images/Digital/VIGNETTE Brand Guidelines/1.webp" type="image/webp">
+            <img src="images/Digital/VIGNETTE Brand Guidelines/1.png" alt="Logo wordmark with grid" class="w-full h-auto rounded-xl object-cover">
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <!-- 01. + 02. Logo Usage & Logo styles & guidelines -->
+    <section class="section-wrapper">
+      <div class="container-custom">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+          <div class="brand-guid-card">
+            <picture>
+              <source srcset="images/Digital/VIGNETTE Brand Guidelines/3.webp" type="image/webp">
+              <img src="images/Digital/VIGNETTE Brand Guidelines/3.png" alt="Logo monogram with grid" class="w-full h-auto rounded-xl object-cover">
+            </picture>
+          </div>
+          <div class="brand-guid-card">
+            <picture>
+              <source srcset="images/Digital/VIGNETTE Brand Guidelines/4.webp" type="image/webp">
+              <img src="images/Digital/VIGNETTE Brand Guidelines/4.png" alt="Logo wordmark with grid" class="w-full h-auto rounded-xl object-cover">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03. Color Palette -->
+    <section class="pb-12 sm:pb-16">
+      <div class="container-custom">
+        <div class="bg-white rounded-2xl shadow-md p-8 sm:p-12 lg:p-16 relative">
+          <picture>
+            <source srcset="images/Digital/VIGNETTE Brand Guidelines/5.webp" type="image/webp">
+            <img src="images/Digital/VIGNETTE Brand Guidelines/5.png" alt="Logo wordmark with grid" class="w-full h-auto rounded-xl object-cover">
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04. + 05 Typography & Social Media Templates -->
+    <section class="section-wrapper">
+      <div class="container-custom">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+          <div class="brand-guid-card">
+            <picture>
+              <source srcset="images/Digital/VIGNETTE Brand Guidelines/6.webp" type="image/webp">
+              <img src="images/Digital/VIGNETTE Brand Guidelines/6.png" alt="Logo monogram with grid" class="w-full h-auto rounded-xl object-cover">
+            </picture>
+          </div>
+          <div class="brand-guid-card">
+            <picture>
+              <source srcset="images/Digital/VIGNETTE Brand Guidelines/7.webp" type="image/webp">
+              <img src="images/Digital/VIGNETTE Brand Guidelines/7.png" alt="Logo wordmark with grid" class="w-full h-auto rounded-xl object-cover">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Bottom Nav -->
+    <section class="section-wrapper !pb-8">
+      <div class="container-custom">
+        <nav class="nav-prev-next">
+          <a href="portfolio.html" class="nav-prev-next-link">
+            <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+            Back
+          </a>
+          <a href="portfolio.html" class="nav-prev-next-link">
+            Next
+            <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </nav>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <div class="container-custom">
+    <hr class="m-0 border-0 border-t border-brand-dark/[0.29]" />
+  </div>
+  <footer class="w-full py-12 lg:py-16 bg-transparent">
+    <div class="container-custom flex flex-col md:flex-row justify-between items-center gap-6">
+      <a href="index.html" class="text-slate-900 font-bold text-xl hover:text-brand-teal transition-colors">VICTOR.</a>
+      <div class="flex gap-8 text-sm text-slate-500">
+        <a href="#" class="hover:text-slate-900 transition-colors">Privacy Policy</a>
+        <a href="#" class="hover:text-slate-900 transition-colors">Terms of Service</a>
+      </div>
+      <p class="text-sm text-slate-500">© 2023 Victor Consulting, All rights reserved</p>
+    </div>
+  </footer>
+
+  <script src="js/animations.js"></script>
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById('mobile-menu');
+      var iconMenu = document.getElementById('icon-menu');
+      var iconClose = document.getElementById('icon-close');
+      var isClosed = menu.classList.contains('mobile-menu--closed');
+      if (isClosed) {
+        menu.classList.remove('mobile-menu--closed', 'mobile-menu--instant-close');
+        menu.setAttribute('aria-hidden', 'false');
+        iconMenu.classList.add('hidden');
+        iconClose.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      } else {
+        menu.classList.add('mobile-menu--closed');
+        menu.setAttribute('aria-hidden', 'true');
+        iconMenu.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+    }
+    function closeMenuForNavigation() {
+      var menu = document.getElementById('mobile-menu');
+      var iconMenu = document.getElementById('icon-menu');
+      var iconClose = document.getElementById('icon-close');
+      menu.classList.add('mobile-menu--instant-close', 'mobile-menu--closed');
+      menu.setAttribute('aria-hidden', 'true');
+      iconMenu.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+  </script>
+</body>
+</html>

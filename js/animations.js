@@ -44,6 +44,8 @@
 
     if (!track || slides.length === 0) return;
 
+    track.style.setProperty('--slide-count', slides.length);
+
     let currentIndex = 0;
     let autoPlayTimer = null;
 

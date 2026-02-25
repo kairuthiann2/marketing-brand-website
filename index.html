@@ -6,7 +6,7 @@
   <title>Gabu | Real Estate Personal Brand Strategy</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="dist/output.css">
 </head>
 <body class="font-sans text-slate-700 bg-beige antialiased overflow-x-hidden">
@@ -45,8 +45,8 @@
     <!-- HERO SECTION -->
     <section class="section-wrapper page-top-padding pb-12 sm:pb-16 lg:pb-32">
       <div class="container-custom">
-        <div class="grid grid-cols-12 gap-8 sm:gap-12 lg:gap-24 items-center">
-          <div class="col-span-12 lg:col-span-6 space-y-8 reveal">
+        <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-8 sm:gap-12 lg:gap-24 items-center w-full">
+          <div class="min-w-0 space-y-8 reveal">
             <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#D1E6F3] text-slate-600 text-sm font-medium">
               <span class="relative flex h-2 w-2">
                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-teal opacity-75"></span>
@@ -73,9 +73,12 @@
               <a href="#how-it-works" class="btn-secondary-teal">See How it Works</a>
             </div>
           </div>
-          <div class="col-span-12 lg:col-span-6 relative reveal reveal-delay-100 overflow-visible">
-            <div class="hero-image-block w-full min-h-[260px] sm:min-h-[320px] lg:min-h-[588px] lg:h-[588px] pt-6 pl-4 pr-4 pb-4 sm:pt-8 sm:pl-6 lg:pt-[165px] lg:pl-[168px] lg:pr-0 lg:pb-0 flex flex-col justify-end items-center lg:items-end rounded-xl bg-[#1B3A3C] overflow-hidden">
-              <img src="images/profile-hero.png" alt="Victor - Real Estate Consultant" class="hero-img w-full max-w-full lg:max-w-[85%] h-auto object-cover object-right-bottom object-center grayscale block" loading="eager" decoding="async">
+          <div class="min-w-0 relative reveal reveal-delay-100">
+            <div class="about-img-wrapper w-full min-h-[260px] sm:min-h-[320px] lg:min-h-[588px] lg:h-[588px] rounded-2xl overflow-hidden flex items-end">
+              <picture class="block w-full">
+                <source srcset="images/Profile-hero.webp" type="image/webp">
+                <img src="images/profile-hero.png" alt="Victor - Real Estate Consultant" class="w-full h-full min-h-[260px] sm:min-h-[320px] lg:min-h-[588px] object-cover object-right-bottom object-center block" loading="eager" decoding="async">
+              </picture>
             </div>
           </div>
         </div>
@@ -103,9 +106,9 @@
         <p class="text-center text-sm text-slate-500 mb-12 reveal">Trusted by 1000s of agents worldwide.</p>
         <div class="marquee-wrapper overflow-hidden">
           <div class="marquee-track flex items-center gap-12 lg:gap-16">
-            <span class="text-xl font-bold text-slate-500 whitespace-nowrap">Zillow</span>
-            <span class="text-xl font-bold text-slate-500 whitespace-nowrap">Remax</span>
-            <span class="text-xl font-bold text-slate-500 whitespace-nowrap">Freddie Mac</span>
+            <span class="text-xl font-bold text-slate-500 whitespace-nowrap">Quinby</span>
+            <span class="text-xl font-bold text-slate-500 whitespace-nowrap">KemeysBrothers</span>
+            <span class="text-xl font-bold text-slate-500 whitespace-nowrap">Canmore</span>
             <span class="text-xl font-bold text-slate-500 whitespace-nowrap">Coreas</span>
             <span class="text-xl font-bold text-slate-500 whitespace-nowrap">Dias</span>
             <span class="text-xl font-bold text-slate-500 whitespace-nowrap">Zillow</span>
@@ -120,9 +123,9 @@
 
     <!-- AGITATION + SOLUTION (combined, no background breaks) -->
     <section class="section-wrapper">
-      <div class="container-custom flex flex-col items-center gap-10 sm:gap-14 lg:gap-24">
+      <div class="container-custom flex flex-col items-center gap-8 sm:gap-12 lg:gap-24">
       <!-- Block 1: Problem / Agitation -->
-      <div class="flex flex-col lg:flex-row items-start gap-10 sm:gap-14 lg:gap-24 w-full">
+      <div class="flex flex-col lg:flex-row items-start gap-8 sm:gap-12 lg:gap-24 w-full">
         <div class="w-full lg:w-1/2 reveal">
           <div class="section-img-wrapper w-full aspect-[4/3] sm:aspect-[497/408] lg:w-[497px] lg:h-[408px] lg:aspect-auto shrink-0 rounded-[12px] overflow-hidden bg-slate-200 shadow-[0_4px_4px_0_rgba(0,0,0,0.25),0_1px_3px_0_rgba(0,0,0,0.10),0_1px_2px_-1px_rgba(0,0,0,0.10)]">
             <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80" srcset="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=400&q=85 400w, https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80 800w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 497px" alt="Expert agent seeking visibility" class="w-full h-full object-cover object-center grayscale">
@@ -156,7 +159,7 @@
       </div>
 
       <!-- Block 2: Solution -->
-      <div class="flex flex-col lg:flex-row items-start gap-10 sm:gap-14 lg:gap-24 w-full">
+      <div class="flex flex-col lg:flex-row items-start gap-8 sm:gap-12 lg:gap-24 w-full">
         <div class="w-full lg:w-1/2 space-y-8 reveal">
           <h2 class="font-heading section-heading text-slate-900">
             What If Sellers <span class="text-brand-teal">Reached Out First?</span>
@@ -204,7 +207,7 @@
 
     <!-- 3-PHASE AUTHORITY SYSTEM (The Process) -->
     <section id="how-it-works" class="section-wrapper">
-      <div class="container-custom flex flex-col items-center gap-10 sm:gap-14 lg:gap-24">
+      <div class="container-custom flex flex-col items-center gap-8 sm:gap-12 lg:gap-24">
       <!-- Header -->
         <div class="text-center max-w-2xl mx-auto reveal">
           <span class="section-subheading inline-block px-4 py-2 rounded-full border border-brand-teal bg-white text-slate-700 mb-6">The Process</span>
@@ -215,9 +218,9 @@
         </div>
 
       <!-- Process phases: one container wrapping three phase divs, each with 2 column divs -->
-        <div class="w-full flex flex-col gap-10 sm:gap-14 lg:gap-24 reveal">
+        <div class="w-full flex flex-col gap-8 sm:gap-12 lg:gap-24 reveal">
         <!-- Phase 1: Image+list left | Number+text+image right -->
-        <div class="flex flex-col lg:flex-row items-center gap-10 sm:gap-14 lg:gap-24 pb-10 sm:pb-14 lg:pb-24">
+        <div class="flex flex-col lg:flex-row items-center gap-8 sm:gap-12 lg:gap-24 pb-8 sm:pb-12 lg:pb-24">
           <div class="w-full lg:w-1/2 flex flex-col gap-8 order-2 lg:order-1">
             <div class="order-2 lg:order-1 process-img-frame w-full max-w-full lg:max-w-[380px] aspect-[4/3] sm:aspect-[380/300] shrink-0">
               <div class="process-img-frame-accent" aria-hidden="true"></div>
@@ -255,7 +258,7 @@
         </div>
 
         <!-- Phase 2: Number+text+image left | Image+list right -->
-        <div class="flex flex-col lg:flex-row items-center gap-10 sm:gap-14 lg:gap-24 pb-10 sm:pb-14 lg:pb-24">
+        <div class="flex flex-col lg:flex-row items-center gap-8 sm:gap-12 lg:gap-24 pb-8 sm:pb-12 lg:pb-24">
           <div class="w-full lg:w-1/2 flex flex-col gap-8 order-1">
             <div class="flex justify-start">
               <span class="w-16 h-16 flex items-center justify-center rounded-xl bg-brand-dark text-white text-3xl font-bold">2</span>
@@ -292,7 +295,7 @@
         </div>
 
         <!-- Phase 3: Image+list left | Number+text+image right -->
-        <div class="flex flex-col lg:flex-row items-center gap-10 sm:gap-14 lg:gap-24 pb-0">
+        <div class="flex flex-col lg:flex-row items-center gap-8 sm:gap-12 lg:gap-24 pb-0">
           <div class="w-full lg:w-1/2 flex flex-col gap-8 order-2 lg:order-1">
             <div class="order-2 lg:order-1 process-img-frame w-full max-w-full lg:max-w-[380px] aspect-[4/3] sm:aspect-[380/300] shrink-0">
               <div class="process-img-frame-accent" aria-hidden="true"></div>
@@ -379,12 +382,24 @@
                 <p class="text-slate-500 text-sm mb-6">Keller Williams</p>
                 <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=80&h=80" alt="Michael R." class="w-16 h-16 rounded-full object-cover border-2 border-brand-teal mx-auto">
               </div>
+              <div data-testimonial-slide class="testimonial-slide flex-shrink-0 w-full flex flex-col justify-center items-center text-center py-4">
+                <p class="text-xl font-semibold text-slate-900 mb-4">&quot;I have been using his services for over a year now.&quot;</p>
+                <p class="text-slate-700 leading-relaxed mb-6 text-center max-w-xl mx-auto">
+                   I have been using Victor to create media content for my personal brand Rupert Kemeys under my bussnes Ray White Kemeys Brothers, we are one of the largest Real estate companies in Wellington. 
+                  <strong>Victor has taken our social media presence to a new level</strong>. His Professionalism, communication and of course quality of what he producs is a second to none.
+                  I would highly recommend Victor to any Real Estate Professional looking to elevate their brand above their competition.
+                </p>
+                <div class="w-full max-w-xs h-px bg-brand-teal mx-auto mb-6"></div>
+                <p class="text-brand-teal font-medium mb-1">&mdash; Kemeys R., Realtor</p>
+                <p class="text-slate-500 text-sm mb-6">Ray White Kemeys Brothers</p>
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=80&h=80" alt="Michael R." class="w-16 h-16 rounded-full object-cover border-2 border-brand-teal mx-auto">
+              </div>
               </div>
             </div>
 
             <!-- Fixed pagination - current full opacity, total lower opacity -->
             <p data-carousel-pagination class="text-center pt-6 text-brand-teal text-sm font-medium">
-              <span data-carousel-current>1</span>/<span data-carousel-total class="opacity-50">3</span>
+              <span data-carousel-current>1</span>/<span data-carousel-total class="opacity-50">4</span>
             </p>
 
             <!-- Right arrow - inside card on lg, in button row on mobile -->
@@ -410,11 +425,11 @@
     <section class="section-wrapper services-section">
       <div class="container-custom">
         <div class="reveal">
-          <div class="text-center mb-8 lg:mb-10">
+          <div class="text-center mb-8 lg:mb-12">
             <span class="section-subheading inline-block px-4 py-2 rounded-full border border-brand-teal bg-white text-slate-700">Services</span>
             <h2 class="section-heading text-slate-900 mt-4 sm:mt-6">The Complete Authority package</h2>
           </div>
-          <div class="service-entries text-left space-y-8 sm:space-y-10" data-service-entries>
+          <div class="service-entries text-left space-y-8 sm:space-y-12" data-service-entries>
             <article class="service-entry" data-service-entry>
               <div class="service-header" data-service-trigger tabindex="0" role="button" aria-expanded="false" aria-controls="service-content-1" id="service-trigger-1">
                 <div class="flex items-center gap-4 pt-4 sm:pt-5 pb-3">
@@ -489,7 +504,7 @@
     <!-- WHO THIS IS FOR / NOT FOR -->
     <section class="section-wrapper">
       <div class="container-custom">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 lg:gap-16 reveal">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 reveal">
           <div class="who-card who-card--not rounded-2xl border border-slate-200 bg-white p-8 lg:p-10">
             <div class="flex items-center gap-4 mb-8">
               <span class="w-12 h-12 rounded-lg border-2 border-red-400 flex items-center justify-center shrink-0">
@@ -497,7 +512,7 @@
               </span>
               <h3 class="text-xl font-bold text-slate-900">Who This is not For</h3>
             </div>
-            <ul class="space-y-5">
+            <ul class="space-y-6">
               <li class="flex items-start gap-3">
                 <svg class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
                 <span class="text-slate-700">New agents with zero budget for marketing.</span>
@@ -523,7 +538,7 @@
               </span>
               <h3 class="text-xl font-bold text-slate-900">Who This is For</h3>
             </div>
-            <ul class="space-y-5">
+            <ul class="space-y-6">
               <li class="flex items-start gap-3">
                 <svg class="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                 <span class="text-slate-700">Agents doing $10M+ volume looking to scale to $30M+</span>
@@ -549,7 +564,7 @@
     <!-- ABOUT VICTOR -->
     <section class="section-wrapper w-full">
       <div class="container-custom w-full">
-        <div class="flex flex-col lg:flex-row items-stretch gap-10 sm:gap-12 lg:gap-16 w-full">
+        <div class="flex flex-col lg:flex-row items-stretch gap-8 sm:gap-12 lg:gap-16 w-full">
           <div class="w-full lg:w-1/2 flex flex-col justify-center reveal">
             <span class="section-subheading inline-block px-4 py-2 rounded-full border border-brand-teal-light bg-white text-slate-700 mb-6 w-fit">About Victor</span>
             <h2 class="section-heading text-slate-900 mb-8">Helping Realtors Become Market Leaders</h2>
@@ -563,7 +578,10 @@
           </div>
           <div class="w-full lg:w-1/2 min-h-[280px] sm:min-h-[360px] lg:min-h-[520px] reveal reveal-delay-100">
             <div class="about-img-wrapper w-full h-full min-h-[280px] sm:min-h-[360px] lg:min-h-[520px] rounded-2xl overflow-hidden flex items-end justify-center lg:justify-end">
-              <img src="images/profile-hero.png" alt="Victor - Real Estate Consultant" class="w-full max-w-full lg:max-w-[85%] h-auto object-cover object-right-bottom object-center grayscale block" loading="lazy" decoding="async">
+              <picture>
+                <source srcset="images/Profile-hero.webp" type="image/webp">
+                <img src="images/profile-hero.png" alt="Victor - Real Estate Consultant" class="w-full max-w-full lg:max-w-[85%] h-auto object-cover object-right-bottom object-center block" loading="lazy" decoding="async">
+              </picture>
             </div>
           </div>
         </div>
@@ -574,10 +592,13 @@
     <section class="section-wrapper">
       <div class="container-custom">
         <h2 class="section-heading text-brand-dark mb-12 reveal">Frequently Asked Questions</h2>
-        <div class="flex flex-col lg:flex-row gap-10 sm:gap-14 lg:gap-24 items-center">
+        <div class="flex flex-col lg:flex-row gap-8 sm:gap-12 lg:gap-24 items-center">
           <!-- Left: illustration -->
           <div class="w-full lg:w-1/2 flex justify-center lg:justify-start reveal">
-            <img src="images/FAQs.png" alt="Frequently asked questions" class="w-full max-w-full lg:max-w-md object-contain" loading="lazy" decoding="async">
+            <picture>
+              <source srcset="images/FAQs.webp" type="image/webp">
+              <img src="images/FAQs.png" alt="Frequently asked questions" class="w-full max-w-full lg:max-w-md object-contain" loading="lazy" decoding="async">
+            </picture>
           </div>
           <!-- Right: FAQ accordion cards -->
           <div class="w-full lg:w-1/2 space-y-4 reveal reveal-delay-100">
@@ -636,7 +657,7 @@
         <div class="bg-white rounded-2xl shadow-md p-8 lg:p-12 text-center reveal">
           <span class="section-subheading inline-flex items-center justify-center px-4 py-2 rounded-full border border-brand-teal text-brand-teal mb-6">Not Sure Where to Start?</span>
           <h2 class="section-heading text-brand-dark mb-6">Start With A Free Consultation</h2>
-          <p class="text-slate-600 text-lg max-w-2xl mx-auto mb-10">Stop watching other agents win with social media. Let&apos;s build your brand and fill your pipeline.</p>
+          <p class="text-slate-600 text-lg max-w-2xl mx-auto mb-8">Stop watching other agents win with social media. Let&apos;s build your brand and fill your pipeline.</p>
           <a href="booking.html" class="btn-primary">Book your free consultation</a>
         </div>
       </div>

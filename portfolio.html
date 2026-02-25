@@ -6,7 +6,7 @@
     <title>Portfolio | Gabu — Selected Work</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="dist/output.css">
 </head>
 <body class="font-sans text-slate-700 bg-beige antialiased">
@@ -39,73 +39,115 @@
     </div>
 
     <!-- SELECTED WORK: Hero + Portfolio Items (same width as navbar) -->
-    <section class="page-top-padding pb-12 sm:pb-16 lg:pb-32">
+    <section class="page-top-padding portfolio-work-section">
         <div class="container-custom">
             <!-- Section label + title -->
             <div class="text-center max-w-2xl mx-auto mb-8 reveal">
                 <span class="section-subheading inline-block px-4 py-2 rounded-full border border-brand-teal bg-white text-slate-700">Work</span>
-                <h1 class="mt-3 text-3xl lg:text-4xl font-semibold text-slate-900 tracking-tight">Selected Work</h1>
+                <h1 class="mt-4 text-3xl lg:text-4xl font-semibold text-slate-900 tracking-tight">Selected Work</h1>
             </div>
             <!-- Outer carousel: Content system | Design (category level) - manual only, no auto-play -->
             <div data-content-carousel data-autoplay="false" class="reveal reveal-delay-100">
                 <!-- Category tabs: Content system | Design -->
-                <div class="flex flex-wrap gap-3 mb-8">
+                <div class="flex flex-wrap gap-2 mb-8">
                     <div class="flex items-center gap-2" role="tablist" aria-label="Portfolio category">
                         <button type="button" data-content-carousel-tab data-slide-index="0" role="tab" aria-selected="true" class="content-carousel-tab content-carousel-tab--pill content-carousel-tab--active">Content system</button>
                         <button type="button" data-content-carousel-tab data-slide-index="1" role="tab" aria-selected="false" class="content-carousel-tab content-carousel-tab--pill">Design</button>
                     </div>
                 </div>
+                <!-- Horizontal separator between category tabs and content -->
+                <div class="portfolio-tab-separator mb-8" aria-hidden="true"></div>
                 <!-- Outer viewport -->
                 <div class="content-carousel-viewport min-h-[280px]">
                     <div data-content-carousel-track>
                         <!-- Slide 0: Content System (Long Form | Short Form) -->
                         <div data-content-carousel-slide class="px-0">
-                            <div data-content-carousel data-dwell-ms="7000">
+                            <div data-content-carousel data-dwell-ms="7000" data-autoplay="false">
                                 <div class="flex justify-end mb-6 sm:mb-8">
                                     <div class="flex items-center gap-2" role="tablist" aria-label="Content format">
-                                        <button type="button" data-content-carousel-tab data-slide-index="0" role="tab" aria-selected="true" class="content-carousel-tab content-carousel-tab--active">Long Form</button>
+                                        <button type="button" data-content-carousel-tab data-slide-index="0" role="tab" aria-selected="true" class="content-carousel-tab content-carousel-tab--active">Long Form Videos</button>
                                         <span class="text-slate-400" aria-hidden="true">|</span>
-                                        <button type="button" data-content-carousel-tab data-slide-index="1" role="tab" aria-selected="false" class="content-carousel-tab">Short Form</button>
+                                        <button type="button" data-content-carousel-tab data-slide-index="1" role="tab" aria-selected="false" class="content-carousel-tab">Short Form Videos</button>
                                     </div>
                                 </div>
                                 <div class="content-carousel-viewport min-h-[280px]">
                                     <div data-content-carousel-track>
                                         <div data-content-carousel-slide class="px-0">
-                                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 sm:items-center">
-                                                <div class="portfolio-card-left">
-                                                    <div class="portfolio-card-left-mat">
-                                                        <div class="portfolio-card-left-inner">
-                                                            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80" alt="Long form project" class="w-full h-full object-cover object-center grayscale rounded-lg">
+                                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 lg:gap-8 sm:items-start">
+                                                <div class="space-y-6 sm:space-y-8 lg:space-y-12">
+                                                    <div class="portfolio-card-left">
+                                                        <div class="portfolio-card-left-mat">
+                                                            <div class="portfolio-card-left-inner portfolio-card-left-inner--video">
+                                                                <iframe
+                                                                    data-src="https://player.vimeo.com/video/1167267716?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;title=0"
+                                                                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                                                                    referrerpolicy="strict-origin-when-cross-origin"
+                                                                    title="1308 Woodlawn Beach - Full Video"
+                                                                ></iframe>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="portfolio-card-left">
+                                                        <div class="portfolio-card-left-mat">
+                                                            <div class="portfolio-card-left-inner portfolio-card-left-inner--video">
+                                                                <iframe
+                                                                    data-src="https://player.vimeo.com/video/1167267585?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                                                                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                                                                    referrerpolicy="strict-origin-when-cross-origin"
+                                                                    title="Stillwell (R)"
+                                                                ></iframe>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="portfolio-card-right">
                                                     <div class="portfolio-card-right-frame">
-                                                        <div class="portfolio-card-right-accent" aria-hidden="true"></div>
-                                                        <div class="portfolio-card-right-media">
-                                                            <div class="w-full h-full bg-slate-800 rounded-xl flex items-center justify-center">
-                                                                <svg class="w-16 h-16 text-white/60" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7L8 5z"/></svg>
-                                                            </div>
+                                                        <div class="portfolio-card-right-media portfolio-card-right-media--video">
+                                                            <iframe
+                                                                data-src="https://player.vimeo.com/video/1167267418?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                                                                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                                                                referrerpolicy="strict-origin-when-cross-origin"
+                                                                title="Maranta Final"
+                                                            ></iframe>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div data-content-carousel-slide class="px-0">
-                                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 sm:items-center">
-                                                <div class="portfolio-card-left">
-                                                    <div class="portfolio-card-left-mat">
-                                                        <div class="portfolio-card-left-inner">
-                                                            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="Short form project" class="w-full h-full object-cover object-center grayscale rounded-lg">
+                                            <div class="shortform-grid grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 lg:gap-8 sm:items-start">
+                                                <div class="space-y-6 sm:space-y-8 lg:space-y-12">
+                                                    <div class="portfolio-card-left">
+                                                        <div class="portfolio-card-left-mat">
+                                                            <div class="portfolio-card-left-inner portfolio-card-left-inner--shortform-4x5">
+                                                                <iframe data-src="https://player.vimeo.com/video/1167266307?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="1218(2)"></iframe>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="portfolio-card-right">
+                                                        <div class="portfolio-card-right-frame">
+                                                            <div class="portfolio-card-right-media portfolio-card-right-media--shortform">
+                                                                <div class="portfolio-card-right-video-wrap">
+                                                                    <iframe data-src="https://player.vimeo.com/video/1167278873?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="1001"></iframe>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="portfolio-card-right">
-                                                    <div class="portfolio-card-right-frame">
-                                                        <div class="portfolio-card-right-accent" aria-hidden="true"></div>
-                                                        <div class="portfolio-card-right-media">
-                                                            <div class="w-full h-full bg-slate-800 rounded-xl flex items-center justify-center">
-                                                                <svg class="w-16 h-16 text-white/60" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7L8 5z"/></svg>
+                                                <div class="space-y-6 sm:space-y-8 lg:space-y-12">
+                                                    <div class="portfolio-card-right">
+                                                        <div class="portfolio-card-right-frame">
+                                                            <div class="portfolio-card-right-media portfolio-card-right-media--shortform">
+                                                                <div class="portfolio-card-right-video-wrap">
+                                                                    <iframe data-src="https://player.vimeo.com/video/1167266698?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Reel (Vignette)"></iframe>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="portfolio-card-left">
+                                                        <div class="portfolio-card-left-mat">
+                                                            <div class="portfolio-card-left-inner portfolio-card-left-inner--shortform-4x5">
+                                                                <iframe data-src="https://player.vimeo.com/video/1167265706?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="0220(4)"></iframe>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -118,7 +160,7 @@
                         </div>
                         <!-- Slide 1: Design (Digital | Print) -->
                         <div data-content-carousel-slide class="px-0">
-                            <div data-content-carousel data-dwell-ms="7000">
+                            <div data-content-carousel data-dwell-ms="7000" data-autoplay="false">
                                 <div class="flex justify-end mb-6 sm:mb-8">
                                     <div class="flex items-center gap-2" role="tablist" aria-label="Design category">
                                         <button type="button" data-content-carousel-tab data-slide-index="0" role="tab" aria-selected="true" class="content-carousel-tab content-carousel-tab--active">Digital</button>
@@ -128,44 +170,113 @@
                                 </div>
                                 <div class="content-carousel-viewport min-h-[280px]">
                                     <div data-content-carousel-track>
-                                        <!-- Digital slide -->
+                                        <!-- Digital slide: Brand Guidelines + Social Templates (vertical stack) -->
                                         <div data-content-carousel-slide class="px-0">
-                                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 sm:items-center">
-                                                <div class="portfolio-card-left">
-                                                    <div class="portfolio-card-left-mat">
-                                                        <div class="portfolio-card-left-inner">
-                                                            <img src="https://images.unsplash.com/photo-1561070791-2526d31294b2?auto=format&fit=crop&w=800&q=80" alt="Digital design project" class="w-full h-full object-cover object-center grayscale rounded-lg">
-                                                        </div>
+                                            <div class="space-y-8 sm:space-y-12 lg:space-y-12">
+                                                <!-- Brand Guidelines section -->
+                                                <div class="space-y-6 sm:space-y-8">
+                                                    <h3 class="digital-subheading text-lg sm:text-xl font-semibold text-slate-900 tracking-tight">Brand Guidelines</h3>
+                                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 lg:gap-8 sm:items-start">
+                                                        <a href="vignette-guidelines.html" class="portfolio-card-left block group">
+                                                            <div class="portfolio-card-left-mat portfolio-card-left-mat--image portfolio-card-left-mat--accent-top-left">
+                                                                <div class="portfolio-card-left-accent" aria-hidden="true"></div>
+                                                                <div class="portfolio-card-left-inner portfolio-card-left-inner--square">
+                                                                    <picture>
+                                                                      <source srcset="images/Digital/VIGNETTE Brand Guidelines/Here is an open Book Mockup from our NEW Mockup….webp" type="image/webp">
+                                                                      <img src="images/Digital/VIGNETTE Brand Guidelines/Here is an open Book Mockup from our NEW Mockup….jpg" alt="Vignette Brand Guidelines - Book mockup" class="w-full h-full object-cover object-center grayscale rounded-lg group-hover:grayscale-0 transition-all duration-300">
+                                                                    </picture>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                        <a href="devin-colby-guidelines.html" class="portfolio-card-left block group">
+                                                            <div class="portfolio-card-left-mat portfolio-card-left-mat--image portfolio-card-left-mat--accent-bottom-right">
+                                                                <div class="portfolio-card-left-accent" aria-hidden="true"></div>
+                                                                <div class="portfolio-card-left-inner portfolio-card-left-inner--square">
+                                                                    <picture>
+                                                                      <source srcset="images/Digital/Devin&amp;Colby brand guidlines/Hey guys, check new awesome mockups from @tdmockup….webp" type="image/webp">
+                                                                      <img src="images/Digital/Devin&Colby brand guidlines/Hey guys, check new awesome mockups from @tdmockup….jpg" alt="Devin & Colby Brand Guidelines" class="w-full h-full object-cover object-center grayscale rounded-lg group-hover:grayscale-0 transition-all duration-300">
+                                                                    </picture>
+                                                                </div>
+                                                            </div>
+                                                        </a>
                                                     </div>
                                                 </div>
-                                                <div class="portfolio-card-right">
-                                                    <div class="portfolio-card-right-frame">
-                                                        <div class="portfolio-card-right-accent" aria-hidden="true"></div>
-                                                        <div class="portfolio-card-right-media">
-                                                            <div class="w-full h-full bg-slate-800 rounded-xl flex items-center justify-center">
-                                                                <svg class="w-16 h-16 text-white/60" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7L8 5z"/></svg>
+                                                <!-- Social Templates section -->
+                                                <div class="space-y-6 sm:space-y-8">
+                                                    <h3 class="digital-subheading text-lg sm:text-xl font-semibold text-slate-900 tracking-tight">Social Templates</h3>
+                                                    <div class="portfolio-card-left w-full">
+                                                        <div class="portfolio-card-left-mat portfolio-card-left-mat--image">
+                                                            <div class="portfolio-card-left-accent" aria-hidden="true"></div>
+                                                            <div class="portfolio-card-left-inner portfolio-card-left-inner--wide">
+                                                                <picture>
+                                                                  <source srcset="images/Digital/VIGNETTE Brand Guidelines/Here is an open Book Mockup from our NEW Mockup….webp" type="image/webp">
+                                                                  <img src="images/Digital/VIGNETTE Brand Guidelines/Here is an open Book Mockup from our NEW Mockup….jpg" alt="Social template design" class="w-full h-full object-cover object-center grayscale rounded-lg">
+                                                                </picture>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- Print slide -->
+                                        <!-- Print slide: News paper ad + Listing Flyers (same layout as Digital) -->
                                         <div data-content-carousel-slide class="px-0">
-                                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 sm:items-center">
-                                                <div class="portfolio-card-left">
-                                                    <div class="portfolio-card-left-mat">
-                                                        <div class="portfolio-card-left-inner">
-                                                            <img src="https://images.unsplash.com/photo-1586719259459-d88d1379f6b4?auto=format&fit=crop&w=800&q=80" alt="Print design project" class="w-full h-full object-cover object-center grayscale rounded-lg">
+                                            <div class="space-y-8 sm:space-y-12 lg:space-y-12">
+                                                <!-- Carousel section: 3 carousel videos (4:5, lazy-loaded) -->
+                                                <div class="space-y-6 sm:space-y-8">
+                                                    <h3 class="digital-subheading text-lg sm:text-xl font-semibold text-slate-900 tracking-tight">Carousel</h3>
+                                                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-8 sm:items-start">
+                                                        <div class="portfolio-card-left">
+                                                            <div class="portfolio-card-left-mat">
+                                                                <div class="portfolio-card-left-inner portfolio-card-left-inner--shortform-4x5">
+                                                                    <iframe data-src="https://player.vimeo.com/video/1167633839?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="v1-morgageRules"></iframe>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="portfolio-card-left">
+                                                            <div class="portfolio-card-left-mat">
+                                                                <div class="portfolio-card-left-inner portfolio-card-left-inner--shortform-4x5">
+                                                                    <iframe data-src="https://player.vimeo.com/video/1167633767?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="V1-GTA-IGPost"></iframe>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="portfolio-card-left">
+                                                            <div class="portfolio-card-left-mat">
+                                                                <div class="portfolio-card-left-inner portfolio-card-left-inner--shortform-4x5">
+                                                                    <iframe data-src="https://player.vimeo.com/video/1167633798?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="v1-Just-sold"></iframe>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="portfolio-card-right">
-                                                    <div class="portfolio-card-right-frame">
-                                                        <div class="portfolio-card-right-accent" aria-hidden="true"></div>
-                                                        <div class="portfolio-card-right-media">
-                                                            <div class="w-full h-full bg-slate-800 rounded-xl flex items-center justify-center">
-                                                                <svg class="w-16 h-16 text-white/60" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7L8 5z"/></svg>
+                                                <!-- Listing Flyers + Magazine (side by side) -->
+                                                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-12">
+                                                    <!-- Listing Flyers section -->
+                                                    <div class="space-y-6 sm:space-y-8">
+                                                        <h3 class="digital-subheading text-lg sm:text-xl font-semibold text-slate-900 tracking-tight">Listing Flyers</h3>
+                                                        <div class="portfolio-card-left w-full">
+                                                            <div class="portfolio-card-left-mat portfolio-card-left-mat--image portfolio-card-left-mat--accent-bottom-left">
+                                                                <div class="portfolio-card-left-accent" aria-hidden="true"></div>
+                                                                <div class="portfolio-card-left-inner portfolio-card-left-inner--wide-tall">
+                                                                    <picture>
+                                                                      <source srcset="images/listin-Newspaper/Listing-Newspaper/Listing.webp" type="image/webp">
+                                                                      <img src="images/listin-Newspaper/Listing-Newspaper/Listing.png" alt="Listing flyer design" class="w-full h-full object-cover object-center rounded-lg" onerror="this.src='https://images.unsplash.com/photo-1586719259459-d88d1379f6b4?auto=format&fit=crop&w=1200&q=80'">
+                                                                    </picture>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- News paper section -->
+                                                    <div class="space-y-6 sm:space-y-8">
+                                                        <h3 class="digital-subheading text-lg sm:text-xl font-semibold text-slate-900 tracking-tight">News paper ad</h3>
+                                                        <div class="portfolio-card-left w-full">
+                                                            <div class="portfolio-card-left-mat portfolio-card-left-mat--image">
+                                                                <div class="portfolio-card-left-accent" aria-hidden="true"></div>
+                                                                <div class="portfolio-card-left-inner portfolio-card-left-inner--wide-tall">
+                                                                    <picture>
+                                                                      <source srcset="images/listin-Newspaper/Listing-Newspaper/Newspaper.webp" type="image/webp">
+                                                                      <img src="images/listin-Newspaper/Listing-Newspaper/Newspaper.png" alt="Magazine design" class="w-full h-full object-cover object-center rounded-lg" onerror="this.src='https://images.unsplash.com/photo-1586719259459-d88d1379f6b4?auto=format&fit=crop&w=1200&q=80'">
+                                                                    </picture>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -182,8 +293,8 @@
         </div>
     </section>
 
-    <!-- CASE STUDY (OPTIONAL FEATURED) -->
-    <section class="section-wrapper">
+    <!-- CASE STUDY (OPTIONAL FEATURED) 
+    <section class="section-wrapper section-wrapper--compact-gap">
         <div class="container-custom">
             <div class="max-w-3xl mx-auto reveal">
                 <span class="text-brand-600 font-semibold tracking-wide uppercase text-sm">Case Study</span>
@@ -192,7 +303,7 @@
                 <p class="mt-2 text-slate-500 text-sm"><em>Short. Let visuals do the work.</em></p>
             </div>
         </div>
-    </section>
+    </section>-->
 
     <!-- CTA: Start With A Free Consultation (same as home page) -->
     <section id="book" class="section-wrapper !pb-8">
@@ -200,20 +311,20 @@
             <div class="bg-white rounded-2xl shadow-md p-8 lg:p-12 text-center reveal">
                 <span class="section-subheading inline-flex items-center justify-center px-4 py-2 rounded-full border border-brand-teal bg-white text-slate-700 mb-6">Not Sure Where to Start?</span>
                 <h2 class="section-heading text-brand-dark mb-6">Start With A Free Consultation</h2>
-                <p class="text-slate-600 text-lg max-w-2xl mx-auto mb-10">Stop watching other agents win with social media. Let&apos;s build your brand and fill your pipeline.</p>
+                <p class="text-slate-600 text-lg max-w-2xl mx-auto mb-8">Stop watching other agents win with social media. Let&apos;s build your brand and fill your pipeline.</p>
                 <a href="booking.html" class="btn-primary">Book your free consultation</a>
             </div>
         </div>
     </section>
 
     <!-- Back / Next nav (after CTA, before footer) -->
-    <div class="container-custom pt-0 pb-8 mb-10">
+    <div class="container-custom pt-0 pb-8 mb-8">
         <nav class="nav-prev-next reveal">
-            <a href="index.html" class="nav-prev-next-link">
+            <a href="index.html" id="portfolio-back-link" class="nav-prev-next-link">
                 <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
                 Back
             </a>
-            <a href="services.html" class="nav-prev-next-link">
+            <a href="services.html" id="portfolio-next-link" class="nav-prev-next-link">
                 Next
                 <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
             </a>
@@ -237,7 +348,36 @@
 
     <script src="js/animations.js"></script>
     <script src="js/content-carousel.js"></script>
+    <script src="js/portfolio-hash.js"></script>
     <script>
+        (function() {
+            var tablist = document.querySelector('[aria-label="Portfolio category"]');
+            var contentSystemTab = tablist ? tablist.querySelector('[data-content-carousel-tab][data-slide-index="0"]') : null;
+            var designTab = tablist ? tablist.querySelector('[data-content-carousel-tab][data-slide-index="1"]') : null;
+
+            var nextLink = document.getElementById('portfolio-next-link');
+            if (nextLink) {
+                nextLink.addEventListener('click', function(e) {
+                    var isContentSystemActive = contentSystemTab && contentSystemTab.classList.contains('content-carousel-tab--active');
+                    if (isContentSystemActive) {
+                        e.preventDefault();
+                        window.location.hash = '#design';
+                    }
+                });
+            }
+
+            var backLink = document.getElementById('portfolio-back-link');
+            if (backLink) {
+                backLink.addEventListener('click', function(e) {
+                    var isDesignActive = designTab && designTab.classList.contains('content-carousel-tab--active');
+                    if (isDesignActive) {
+                        e.preventDefault();
+                        window.location.hash = '';
+                        if (contentSystemTab) contentSystemTab.click();
+                    }
+                });
+            }
+        })();
         function toggleMenu() {
             var menu = document.getElementById('mobile-menu');
             var iconMenu = document.getElementById('icon-menu');

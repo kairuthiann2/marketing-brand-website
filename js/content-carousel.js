@@ -50,10 +50,33 @@
     let currentIndex = 0;
     let autoPlayTimer = null;
 
+    function updateViewportHeight() {
+      const activeSlide = slides[currentIndex];
+      if (activeSlide) {
+        const minH = 280;
+        const slideH = activeSlide.offsetHeight;
+        viewport.style.height = Math.max(minH, slideH) + 'px';
+      }
+    }
+
+    /** Load deferred iframes (data-src) in the active slide to reduce initial load */
+    function loadDeferredIframesInSlide(slideEl) {
+      if (!slideEl) return;
+      slideEl.querySelectorAll('iframe[data-src]').forEach((iframe) => {
+        const src = iframe.getAttribute('data-src');
+        if (src && !iframe.getAttribute('src')) {
+          iframe.setAttribute('src', src);
+        }
+      });
+    }
+
     function goToSlide(index) {
       currentIndex = ((index % slides.length) + slides.length) % slides.length;
       const percentPerSlide = 100 / slides.length;
       track.style.transform = `translateX(-${currentIndex * percentPerSlide}%)`;
+      updateViewportHeight();
+
+      loadDeferredIframesInSlide(slides[currentIndex]);
 
       tabs.forEach((tab) => {
         const idx = parseInt(tab.dataset.slideIndex, 10);
@@ -88,6 +111,7 @@
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             startAutoPlay();
+            setTimeout(updateViewportHeight, 0);
           } else {
             stopAutoPlay();
           }
@@ -107,6 +131,10 @@
     });
 
     goToSlide(0);
+
+    root._updateViewportHeight = updateViewportHeight;
+    window.addEventListener('resize', updateViewportHeight);
+
     // Start only if visible; observer handles visibility changes (e.g. nested carousel coming into view)
     if (autoplay) {
       const rect = viewport.getBoundingClientRect();
@@ -121,6 +149,12 @@
 
   function initAll() {
     document.querySelectorAll('[data-content-carousel]').forEach(initContentCarousel);
+    // Delayed refresh: nested carousels (e.g. Long Form) need parent to re-measure after child viewports are sized; iframes may also load late
+    setTimeout(function refreshAllViewportHeights() {
+      document.querySelectorAll('[data-content-carousel]').forEach(function (r) {
+        if (r._updateViewportHeight) r._updateViewportHeight();
+      });
+    }, 400);
   }
 
   if (document.readyState === 'loading') {
