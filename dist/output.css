@@ -1451,6 +1451,11 @@ video {
   color: rgb(34 34 34 / var(--tw-text-opacity, 1));
 }
 
+.text-\[\#2D2D2D\] {
+  --tw-text-opacity: 1;
+  color: rgb(45 45 45 / var(--tw-text-opacity, 1));
+}
+
 .text-\[\#333\] {
   --tw-text-opacity: 1;
   color: rgb(51 51 51 / var(--tw-text-opacity, 1));
