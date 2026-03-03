@@ -154,7 +154,7 @@ html,
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: Open Sans, ui-sans-serif, system-ui, sans-serif;
+  font-family: DM Sans, ui-sans-serif, system-ui, sans-serif;
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -243,7 +243,7 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: DM Mono, ui-monospace, monospace;
   /* 1 */
   font-feature-settings: normal;
   /* 2 */
@@ -697,8 +697,8 @@ video {
   margin-bottom: 3rem;
 }
 
-.mb-2 {
-  margin-bottom: 0.5rem;
+.mb-3 {
+  margin-bottom: 0.75rem;
 }
 
 .mb-4 {
@@ -896,6 +896,10 @@ video {
 
 .max-w-3xl {
   max-width: 48rem;
+}
+
+.max-w-\[400px\] {
+  max-width: 400px;
 }
 
 .max-w-full {
@@ -1132,23 +1136,13 @@ video {
   border-top-width: 1px;
 }
 
-.border-\[\#6ED3CF\] {
-  --tw-border-opacity: 1;
-  border-color: rgb(110 211 207 / var(--tw-border-opacity, 1));
-}
-
 .border-brand-dark\/\[0\.29\] {
-  border-color: rgb(26 57 59 / 0.29);
+  border-color: rgb(2 60 139 / 0.29);
 }
 
 .border-brand-teal {
   --tw-border-opacity: 1;
-  border-color: rgb(19 150 159 / var(--tw-border-opacity, 1));
-}
-
-.border-brand-teal-light {
-  --tw-border-opacity: 1;
-  border-color: rgb(110 211 207 / var(--tw-border-opacity, 1));
+  border-color: rgb(32 227 235 / var(--tw-border-opacity, 1));
 }
 
 .border-red-400 {
@@ -1171,24 +1165,24 @@ video {
   border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
 }
 
-.bg-\[\#D1E6F3\] {
+.bg-\[\#E8EEF5\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(209 230 243 / var(--tw-bg-opacity, 1));
+  background-color: rgb(232 238 245 / var(--tw-bg-opacity, 1));
 }
 
 .bg-beige {
   --tw-bg-opacity: 1;
-  background-color: rgb(245 240 232 / var(--tw-bg-opacity, 1));
+  background-color: rgb(240 243 248 / var(--tw-bg-opacity, 1));
 }
 
 .bg-brand-dark {
   --tw-bg-opacity: 1;
-  background-color: rgb(26 57 59 / var(--tw-bg-opacity, 1));
+  background-color: rgb(2 60 139 / var(--tw-bg-opacity, 1));
 }
 
 .bg-brand-teal {
   --tw-bg-opacity: 1;
-  background-color: rgb(19 150 159 / var(--tw-bg-opacity, 1));
+  background-color: rgb(32 227 235 / var(--tw-bg-opacity, 1));
 }
 
 .bg-slate-100 {
@@ -1213,6 +1207,10 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+.bg-white\/30 {
+  background-color: rgb(255 255 255 / 0.3);
 }
 
 .object-contain {
@@ -1358,15 +1356,15 @@ video {
 }
 
 .font-heading {
-  font-family: Montserrat, ui-sans-serif, system-ui, sans-serif;
+  font-family: League Spartan, ui-sans-serif, system-ui, sans-serif;
 }
 
 .font-mono {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: DM Mono, ui-monospace, monospace;
 }
 
 .font-sans {
-  font-family: Open Sans, ui-sans-serif, system-ui, sans-serif;
+  font-family: DM Sans, ui-sans-serif, system-ui, sans-serif;
 }
 
 .text-2xl {
@@ -1425,6 +1423,10 @@ video {
   text-transform: uppercase;
 }
 
+.italic {
+  font-style: italic;
+}
+
 .leading-relaxed {
   line-height: 1.625;
 }
@@ -1445,19 +1447,39 @@ video {
   letter-spacing: 0.05em;
 }
 
+.text-\[\#222222\] {
+  --tw-text-opacity: 1;
+  color: rgb(34 34 34 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#222\] {
+  --tw-text-opacity: 1;
+  color: rgb(34 34 34 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#333\] {
+  --tw-text-opacity: 1;
+  color: rgb(51 51 51 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#666\] {
+  --tw-text-opacity: 1;
+  color: rgb(102 102 102 / var(--tw-text-opacity, 1));
+}
+
 .text-brand-600 {
   --tw-text-opacity: 1;
-  color: rgb(19 150 159 / var(--tw-text-opacity, 1));
+  color: rgb(32 227 235 / var(--tw-text-opacity, 1));
 }
 
 .text-brand-dark {
   --tw-text-opacity: 1;
-  color: rgb(26 57 59 / var(--tw-text-opacity, 1));
+  color: rgb(2 60 139 / var(--tw-text-opacity, 1));
 }
 
 .text-brand-teal {
   --tw-text-opacity: 1;
-  color: rgb(19 150 159 / var(--tw-text-opacity, 1));
+  color: rgb(32 227 235 / var(--tw-text-opacity, 1));
 }
 
 .text-red-500 {
@@ -1502,6 +1524,10 @@ video {
 
 .text-white\/60 {
   color: rgb(255 255 255 / 0.6);
+}
+
+.text-white\/80 {
+  color: rgb(255 255 255 / 0.8);
 }
 
 .underline {
@@ -1615,18 +1641,19 @@ video {
 }
 
 .nav-prev-next-link:hover {
-  color: #13969f;
+  color: #20E3EB;
 }
 
-/* Section typography - Headlines: Montserrat (bold, modern) | Body: Open Sans (clean, readable) */
+/* Section typography - Headings: League Spartan | Body: DM Sans | Labels: DM Mono */
 
 .section-subheading {
-  font-family: 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+  font-family: 'DM Mono', ui-monospace, monospace;
   font-size: 0.875rem;
   /* 14px */
   font-weight: 500;
   line-height: 1.25;
-  letter-spacing: 0;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 /* Pill/tag above headings: vertical center text */
@@ -1637,8 +1664,12 @@ video {
   justify-content: center;
 }
 
+.digital-subheading {
+  color: #222222;
+}
+
 .section-heading {
-  font-family: Montserrat, ui-sans-serif, system-ui, sans-serif;
+  font-family: 'League Spartan', ui-sans-serif, system-ui, sans-serif;
   font-weight: 700;
   line-height: 1.25;
   letter-spacing: -0.025em;
@@ -1659,6 +1690,18 @@ video {
     font-size: 2.25rem;
     /* 36px - lg */
   }
+}
+
+/* All section headings use #222222 (exclude hero via explicit text-white on dark sections) */
+
+.section-heading {
+  color: #222222;
+}
+
+/* Agitation section: headings on navy bg must be white for contrast */
+
+.bg-brand-dark .section-heading {
+  color: #ffffff;
 }
 
 .container-custom {
@@ -1771,10 +1814,10 @@ video {
   height: 48px;
   padding: 0 32px;
   border-radius: 12px;
-  background-color: #1A393B;
+  background-color: #023C8B;
   color: white;
   font-weight: 700;
-  font-family: Montserrat, ui-sans-serif, system-ui, sans-serif;
+  font-family: 'League Spartan', ui-sans-serif, system-ui, sans-serif;
   white-space: nowrap;
   text-align: center;
   transition: all 300ms ease-in-out;
@@ -1783,6 +1826,8 @@ video {
 .btn-primary:hover {
   transform: scale(1.03);
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  background-color: #20E3EB;
+  color: #023C8B;
 }
 
 .btn-nav-cta {
@@ -1792,10 +1837,10 @@ video {
   height: 48px;
   padding: 0 32px;
   border-radius: 12px;
-  background-color: #1A393B;
+  background-color: #023C8B;
   color: white;
   font-weight: 700;
-  font-family: Montserrat, ui-sans-serif, system-ui, sans-serif;
+  font-family: 'League Spartan', ui-sans-serif, system-ui, sans-serif;
   white-space: nowrap;
   text-align: center;
   transition: all 300ms ease-in-out;
@@ -1804,6 +1849,8 @@ video {
 .btn-nav-cta:hover {
   transform: scale(1.03);
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  background-color: #20E3EB;
+  color: #023C8B;
 }
 
 .btn-secondary {
@@ -1813,10 +1860,10 @@ video {
   height: 48px;
   padding: 0 32px;
   border-radius: 12px;
-  border: 2px solid #1A393B;
-  color: #1A393B;
+  border: 1.5px solid #023C8B;
+  color: #023C8B;
   font-weight: 700;
-  font-family: Montserrat, ui-sans-serif, system-ui, sans-serif;
+  font-family: 'League Spartan', ui-sans-serif, system-ui, sans-serif;
   white-space: nowrap;
   text-align: center;
   background: transparent;
@@ -1825,8 +1872,9 @@ video {
 
 .btn-secondary:hover {
   transform: scale(1.03);
-  background-color: #1A393B;
-  color: white;
+  border-color: #20E3EB;
+  color: #20E3EB;
+  background-color: transparent;
 }
 
 .btn-secondary-teal {
@@ -1836,10 +1884,10 @@ video {
   height: 48px;
   padding: 0 32px;
   border-radius: 12px;
-  border: 2px solid #13969F;
-  color: #13969F;
+  border: 1.5px solid #20E3EB;
+  color: #20E3EB;
   font-weight: 700;
-  font-family: Montserrat, ui-sans-serif, system-ui, sans-serif;
+  font-family: 'League Spartan', ui-sans-serif, system-ui, sans-serif;
   white-space: nowrap;
   text-align: center;
   background: transparent;
@@ -1848,6 +1896,34 @@ video {
 
 .btn-secondary-teal:hover {
   transform: scale(1.03);
+  background-color: #20E3EB;
+  color: #023C8B;
+}
+
+/* Agitation section CTA: white text, navy bg, cyan border (for use on dark navy backgrounds) */
+
+.btn-agitation-cta {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  padding: 0 32px;
+  border-radius: 12px;
+  background-color: #023C8B;
+  color: white;
+  border: 2px solid #20E3EB;
+  font-weight: 700;
+  font-family: 'League Spartan', ui-sans-serif, system-ui, sans-serif;
+  white-space: nowrap;
+  text-align: center;
+  transition: all 300ms ease-in-out;
+}
+
+.btn-agitation-cta:hover {
+  transform: scale(1.03);
+  background-color: #20E3EB;
+  color: #023C8B;
+  border-color: #20E3EB;
 }
 
 /* Ensure button text never wraps on narrow screens - reduce padding when needed */
@@ -1856,7 +1932,8 @@ video {
   .btn-primary,
   .btn-nav-cta,
   .btn-secondary,
-  .btn-secondary-teal {
+  .btn-secondary-teal,
+  .btn-agitation-cta {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -1931,7 +2008,7 @@ html {
   right: 0;
   width: 48px;
   height: 48px;
-  background: #1A393B;
+  background: #023C8B;
   border-radius: 0 16px 0 0;
   z-index: 2;
   pointer-events: none;
@@ -2078,7 +2155,7 @@ portfolio-card-right {
   right: -4px;
   width: 48px;
   height: 48px;
-  background: #13969F;
+  background: #20E3EB;
   border-radius: 12px;
   z-index: 2;
 }
@@ -2295,11 +2372,11 @@ portfolio-card-right {
 }
 
 .content-carousel-tab:hover {
-  color: #13969F;
+  color: #20E3EB;
 }
 
 .content-carousel-tab--active {
-  color: #13969F;
+  color: #20E3EB;
   font-weight: 600;
 }
 
@@ -2314,14 +2391,14 @@ portfolio-card-right {
 }
 
 .content-carousel-tab--pill:hover {
-  border-color: #13969F;
-  color: #13969F;
+  border-color: #20E3EB;
+  color: #20E3EB;
 }
 
 .content-carousel-tab--pill.content-carousel-tab--active {
-  border-color: #13969F;
+  border-color: #20E3EB;
   background: transparent;
-  color: #13969F;
+  color: #20E3EB;
 }
 
 /* Horizontal separator between category tabs and content - body text color, 1px, low opacity */
@@ -2350,12 +2427,12 @@ portfolio-card-right {
   background-color: rgba(0, 0, 0, 0.02);
 }
 
-/* Green line below the text/subtitle block, low opacity - matches reference */
+/* Line below each service entry - navy to match services brand color */
 
 .service-line {
   height: 1px;
   width: 100%;
-  background: rgba(19, 150, 159, 0.25);
+  background: rgba(2, 60, 139, 0.25);
   margin-top: 1.5rem;
   margin-bottom: 0;
 }
@@ -2382,7 +2459,7 @@ portfolio-card-right {
 
 .service-expanded-inner {
   padding: 1.25rem 0 1.5rem 1rem;
-  border-left: 3px solid rgba(19, 150, 159, 0.3);
+  border-left: 3px solid rgba(2, 60, 139, 0.3);
   margin-left: 0.25rem;
 }
 
@@ -2412,7 +2489,7 @@ portfolio-card-right {
 .service-list-line {
   height: 1px;
   width: 100%;
-  background: rgba(19, 150, 159, 0.3);
+  background: rgba(32, 227, 235, 0.3);
 }
 
 .services-list-wrapper[data-services-list] .services-list-inner {
@@ -2472,7 +2549,7 @@ portfolio-card-right {
 }
 
 .timeline-list .timeline-marker .timeline-dot--active {
-  background-color: #13969F;
+  background-color: #20E3EB;
 }
 
 .timeline-list .timeline-marker .timeline-dot--inactive {
@@ -2487,7 +2564,7 @@ portfolio-card-right {
 }
 
 .timeline-list .timeline-marker .timeline-line--active {
-  background-color: #13969F;
+  background-color: #20E3EB;
 }
 
 .timeline-list .timeline-marker .timeline-line--inactive {
@@ -2548,7 +2625,7 @@ portfolio-card-right {
 a:focus-visible,
 button:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 2px #13969F;
+  box-shadow: 0 0 0 2px #20E3EB;
 }
 
 /* Mobile menu - slide + fade (400ms, same easing as FAQ/service expand) */
@@ -2668,7 +2745,7 @@ button:focus-visible {
   overflow: visible;
 }
 
-/* Teal L-shaped accent - overlays top-right corner, creates "wrapped" look */
+/* Navy L-shaped accent - overlays top-right corner, creates "wrapped" look */
 
 .process-img-frame-accent {
   position: absolute;
@@ -2676,12 +2753,12 @@ button:focus-visible {
   right: 0;
   width: 48px;
   height: 48px;
-  background: #1A393B;
+  background: #023C8B;
   border-radius: 0 12px 0 0;
   z-index: 2;
 }
 
-/* Alternate: teal accent at bottom-left for visual variety */
+/* Alternate: navy accent at bottom-left for visual variety */
 
 .process-img-frame.process-img-frame--alt .process-img-frame-accent {
   top: auto;
@@ -2789,8 +2866,8 @@ img {
 .booking-form-card {
   background: #fff;
   border-radius: 16px;
-  border: 1px solid rgba(26, 57, 59, 0.1);
-  box-shadow: 0 12px 48px rgba(26, 57, 59, 0.08);
+  border: 1px solid rgba(2, 60, 139, 0.1);
+  box-shadow: 0 12px 48px rgba(2, 60, 139, 0.08);
   padding: 40px;
 }
 
@@ -2803,10 +2880,10 @@ img {
 }
 
 .booking-section-title {
-  font-family: Montserrat, ui-sans-serif, system-ui, sans-serif;
+  font-family: 'League Spartan', ui-sans-serif, system-ui, sans-serif;
   font-size: 20px;
   font-weight: 700;
-  color: #1A393B;
+  color: #222222;
   margin-bottom: 8px;
   letter-spacing: -0.02em;
 }
@@ -2834,7 +2911,7 @@ img {
 }
 
 .booking-form-label .required {
-  color: #13969F;
+  color: #20E3EB;
   margin-left: 4px;
 }
 
@@ -2850,7 +2927,7 @@ img {
 .booking-form-textarea {
   width: 100%;
   padding: 12px 16px;
-  font-family: 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+  font-family: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
   font-size: 15px;
   border: 1px solid #e2e8f0;
   border-radius: 8px;
@@ -2862,8 +2939,8 @@ img {
 .booking-form-select:focus,
 .booking-form-textarea:focus {
   outline: none;
-  border-color: #13969F;
-  box-shadow: 0 0 0 3px rgba(19, 150, 159, 0.12);
+  border-color: #20E3EB;
+  box-shadow: 0 0 0 3px rgba(32, 227, 235, 0.12);
 }
 
 .booking-form-textarea {
@@ -2895,8 +2972,8 @@ img {
 
 .booking-radio-option:hover,
 .booking-checkbox-option:hover {
-  border-color: #13969F;
-  background: rgba(19, 150, 159, 0.04);
+  border-color: #20E3EB;
+  background: rgba(32, 227, 235, 0.04);
 }
 
 .booking-radio-option input,
@@ -2940,8 +3017,8 @@ img {
 }
 
 .booking-budget-option input:checked ~ .booking-budget-card {
-  border-color: #13969F;
-  background: rgba(19, 150, 159, 0.08);
+  border-color: #20E3EB;
+  background: rgba(32, 227, 235, 0.08);
 }
 
 .booking-budget-card:hover {
@@ -2949,10 +3026,10 @@ img {
 }
 
 .booking-budget-card .amount {
-  font-family: Montserrat, ui-sans-serif, system-ui, sans-serif;
+  font-family: 'League Spartan', ui-sans-serif, system-ui, sans-serif;
   font-size: 18px;
   font-weight: 700;
-  color: #1A393B;
+  color: #023C8B;
   display: block;
 }
 
@@ -2965,11 +3042,11 @@ img {
 .booking-submit-btn {
   width: 100%;
   padding: 16px 32px;
-  font-family: Montserrat, ui-sans-serif, system-ui, sans-serif;
+  font-family: 'League Spartan', ui-sans-serif, system-ui, sans-serif;
   font-size: 16px;
   font-weight: 700;
   letter-spacing: -0.01em;
-  background: #1A393B;
+  background: #023C8B;
   color: #fff;
   border: none;
   border-radius: 12px;
@@ -2980,7 +3057,9 @@ img {
 
 .booking-submit-btn:hover {
   transform: scale(1.02);
-  box-shadow: 0 8px 24px rgba(26, 57, 59, 0.25);
+  box-shadow: 0 8px 24px rgba(32, 227, 235, 0.35);
+  background: #20E3EB;
+  color: #023C8B;
 }
 
 .booking-submit-btn:disabled {
@@ -3000,8 +3079,8 @@ img {
   padding: 48px 40px;
   background: #fff;
   border-radius: 16px;
-  border: 1px solid rgba(26, 57, 59, 0.1);
-  box-shadow: 0 12px 48px rgba(26, 57, 59, 0.08);
+  border: 1px solid rgba(2, 60, 139, 0.1);
+  box-shadow: 0 12px 48px rgba(2, 60, 139, 0.08);
 }
 
 .booking-success-message.show {
@@ -3011,7 +3090,7 @@ img {
 .booking-success-icon {
   width: 64px;
   height: 64px;
-  background: linear-gradient(135deg, #1A393B, #13969F);
+  background: linear-gradient(135deg, #023C8B, #20E3EB);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -3022,10 +3101,10 @@ img {
 }
 
 .booking-success-title {
-  font-family: Montserrat, ui-sans-serif, system-ui, sans-serif;
+  font-family: 'League Spartan', ui-sans-serif, system-ui, sans-serif;
   font-size: 28px;
   font-weight: 800;
-  color: #1A393B;
+  color: #222222;
   margin-bottom: 16px;
 }
 
@@ -3054,8 +3133,8 @@ img {
 .booking-wizard-card {
   background: #fff;
   border-radius: 16px;
-  border: 1px solid rgba(26, 57, 59, 0.1);
-  box-shadow: 0 12px 48px rgba(26, 57, 59, 0.08);
+  border: 1px solid rgba(2, 60, 139, 0.1);
+  box-shadow: 0 12px 48px rgba(2, 60, 139, 0.08);
   padding: 40px;
   position: relative;
   overflow: hidden;
@@ -3109,12 +3188,12 @@ img {
 }
 
 .booking-stepper-dot.is-active {
-  background: #1A393B;
+  background: #023C8B;
   transform: scale(1.2);
 }
 
 .booking-stepper-dot.is-complete {
-  background: #13969F;
+  background: #20E3EB;
 }
 
 .booking-wizard-back {
@@ -3127,12 +3206,12 @@ img {
   cursor: pointer;
   border-radius: 8px;
   transition: all 0.2s;
-  font-family: 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+  font-family: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
 }
 
 .booking-wizard-back:hover:not(:disabled) {
-  color: #1A393B;
-  background: rgba(26, 57, 59, 0.06);
+  color: #023C8B;
+  background: rgba(2, 60, 139, 0.06);
 }
 
 .booking-wizard-back:disabled {
@@ -3147,10 +3226,10 @@ img {
   height: 48px;
   padding: 0 32px;
   border-radius: 12px;
-  background-color: #1A393B;
+  background-color: #023C8B;
   color: white;
   font-weight: 700;
-  font-family: Montserrat, ui-sans-serif, system-ui, sans-serif;
+  font-family: 'League Spartan', ui-sans-serif, system-ui, sans-serif;
   font-size: 16px;
   border: none;
   cursor: pointer;
@@ -3166,8 +3245,9 @@ img {
   flex: unset;
 }
 
-.hover\:bg-brand-teal\/10:hover {
-  background-color: rgb(19 150 159 / 0.1);
+.hover\:bg-brand-teal:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(32 227 235 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:bg-slate-100:hover {
@@ -3177,12 +3257,11 @@ img {
 
 .hover\:text-brand-dark:hover {
   --tw-text-opacity: 1;
-  color: rgb(26 57 59 / var(--tw-text-opacity, 1));
+  color: rgb(2 60 139 / var(--tw-text-opacity, 1));
 }
 
-.hover\:text-brand-teal:hover {
-  --tw-text-opacity: 1;
-  color: rgb(19 150 159 / var(--tw-text-opacity, 1));
+.hover\:text-brand-dark\/80:hover {
+  color: rgb(2 60 139 / 0.8);
 }
 
 .hover\:text-slate-900:hover {
@@ -3205,10 +3284,6 @@ img {
 
   .sm\:aspect-\[380\/300\] {
     aspect-ratio: 380/300;
-  }
-
-  .sm\:aspect-\[497\/408\] {
-    aspect-ratio: 497/408;
   }
 
   .sm\:min-h-\[320px\] {
@@ -3275,6 +3350,11 @@ img {
     padding: 2rem;
   }
 
+  .sm\:py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
   .sm\:pb-12 {
     padding-bottom: 3rem;
   }
@@ -3334,6 +3414,11 @@ img {
     order: 2;
   }
 
+  .lg\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
   .lg\:mb-12 {
     margin-bottom: 3rem;
   }
@@ -3358,14 +3443,6 @@ img {
     aspect-ratio: 4/3;
   }
 
-  .lg\:aspect-auto {
-    aspect-ratio: auto;
-  }
-
-  .lg\:h-\[408px\] {
-    height: 408px;
-  }
-
   .lg\:h-\[588px\] {
     height: 588px;
   }
@@ -3380,10 +3457,6 @@ img {
 
   .lg\:w-1\/2 {
     width: 50%;
-  }
-
-  .lg\:w-\[497px\] {
-    width: 497px;
   }
 
   .lg\:max-w-\[380px\] {
@@ -3469,6 +3542,11 @@ img {
   .lg\:py-16 {
     padding-top: 4rem;
     padding-bottom: 4rem;
+  }
+
+  .lg\:py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 
   .lg\:pb-24 {

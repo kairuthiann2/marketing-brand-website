@@ -4,26 +4,28 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Open Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        heading: ['Montserrat', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        sans: ['DM Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        heading: ['League Spartan', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        mono: ['DM Mono', 'ui-monospace', 'monospace'],
       },
       colors: {
         brand: {
-          dark: '#1A393B',
-          green: '#1A393B',
-          teal: '#13969F',
-          'teal-light': '#6ED3CF',
-          'nav-bg': '#C6E0F1',
-          'pill-bg': '#D1E6F3',
-          100: 'rgba(19, 150, 159, 0.12)',
-          600: '#13969F',
-          900: '#1A393B',
+          dark: '#023C8B',
+          navy: '#023C8B',
+          accent: '#20E3EB',
+          teal: '#20E3EB',
+          'teal-light': '#20E3EB',
+          'nav-bg': '#F0F3F8',
+          'pill-bg': '#F7F9FC',
+          100: 'rgba(32, 227, 235, 0.12)',
+          600: '#20E3EB',
+          900: '#023C8B',
         },
         beige: {
-          DEFAULT: '#F5F0E8',
-          50: '#FAF8F5',
-          100: '#F5F0E8',
-          200: '#EDE6DC',
+          DEFAULT: '#F0F3F8',
+          50: '#F7F9FC',
+          100: '#F0F3F8',
+          200: '#B4B4B4',
         },
       },
       maxWidth: {

@@ -29,16 +29,17 @@
   transition: color 0.2s;
 }
 .nav-prev-next-link:hover {
-  color: #13969f;
+  color: #20E3EB;
 }
 
-/* Section typography - Headlines: Montserrat (bold, modern) | Body: Open Sans (clean, readable) */
+/* Section typography - Headings: League Spartan | Body: DM Sans | Labels: DM Mono */
 .section-subheading {
-  font-family: 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+  font-family: 'DM Mono', ui-monospace, monospace;
   font-size: 0.875rem;  /* 14px */
   font-weight: 500;
   line-height: 1.25;
-  letter-spacing: 0;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 /* Pill/tag above headings: vertical center text */
@@ -48,8 +49,12 @@
   justify-content: center;
 }
 
+.digital-subheading {
+  color: #222222;
+}
+
 .section-heading {
-  font-family: Montserrat, ui-sans-serif, system-ui, sans-serif;
+  font-family: 'League Spartan', ui-sans-serif, system-ui, sans-serif;
   font-weight: 700;
   line-height: 1.25;
   letter-spacing: -0.025em;
@@ -67,6 +72,16 @@
   .section-heading {
     font-size: 2.25rem;   /* 36px - lg */
   }
+}
+
+/* All section headings use #222222 (exclude hero via explicit text-white on dark sections) */
+.section-heading {
+  color: #222222;
+}
+
+/* Agitation section: headings on navy bg must be white for contrast */
+.bg-brand-dark .section-heading {
+  color: #ffffff;
 }
 
 .container-custom {
@@ -172,10 +187,10 @@
   height: 48px;
   padding: 0 32px;
   border-radius: 12px;
-  background-color: #1A393B;
+  background-color: #023C8B;
   color: white;
   font-weight: 700;
-  font-family: Montserrat, ui-sans-serif, system-ui, sans-serif;
+  font-family: 'League Spartan', ui-sans-serif, system-ui, sans-serif;
   white-space: nowrap;
   text-align: center;
   transition: all 300ms ease-in-out;
@@ -184,6 +199,8 @@
 .btn-primary:hover {
   transform: scale(1.03);
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  background-color: #20E3EB;
+  color: #023C8B;
 }
 
 .btn-nav-cta {
@@ -193,10 +210,10 @@
   height: 48px;
   padding: 0 32px;
   border-radius: 12px;
-  background-color: #1A393B;
+  background-color: #023C8B;
   color: white;
   font-weight: 700;
-  font-family: Montserrat, ui-sans-serif, system-ui, sans-serif;
+  font-family: 'League Spartan', ui-sans-serif, system-ui, sans-serif;
   white-space: nowrap;
   text-align: center;
   transition: all 300ms ease-in-out;
@@ -205,6 +222,8 @@
 .btn-nav-cta:hover {
   transform: scale(1.03);
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  background-color: #20E3EB;
+  color: #023C8B;
 }
 
 .btn-secondary {
@@ -214,10 +233,10 @@
   height: 48px;
   padding: 0 32px;
   border-radius: 12px;
-  border: 2px solid #1A393B;
-  color: #1A393B;
+  border: 1.5px solid #023C8B;
+  color: #023C8B;
   font-weight: 700;
-  font-family: Montserrat, ui-sans-serif, system-ui, sans-serif;
+  font-family: 'League Spartan', ui-sans-serif, system-ui, sans-serif;
   white-space: nowrap;
   text-align: center;
   background: transparent;
@@ -226,8 +245,9 @@
 
 .btn-secondary:hover {
   transform: scale(1.03);
-  background-color: #1A393B;
-  color: white;
+  border-color: #20E3EB;
+  color: #20E3EB;
+  background-color: transparent;
 }
 
 .btn-secondary-teal {
@@ -237,10 +257,10 @@
   height: 48px;
   padding: 0 32px;
   border-radius: 12px;
-  border: 2px solid #13969F;
-  color: #13969F;
+  border: 1.5px solid #20E3EB;
+  color: #20E3EB;
   font-weight: 700;
-  font-family: Montserrat, ui-sans-serif, system-ui, sans-serif;
+  font-family: 'League Spartan', ui-sans-serif, system-ui, sans-serif;
   white-space: nowrap;
   text-align: center;
   background: transparent;
@@ -249,6 +269,33 @@
 
 .btn-secondary-teal:hover {
   transform: scale(1.03);
+  background-color: #20E3EB;
+  color: #023C8B;
+}
+
+/* Agitation section CTA: white text, navy bg, cyan border (for use on dark navy backgrounds) */
+.btn-agitation-cta {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  padding: 0 32px;
+  border-radius: 12px;
+  background-color: #023C8B;
+  color: white;
+  border: 2px solid #20E3EB;
+  font-weight: 700;
+  font-family: 'League Spartan', ui-sans-serif, system-ui, sans-serif;
+  white-space: nowrap;
+  text-align: center;
+  transition: all 300ms ease-in-out;
+}
+
+.btn-agitation-cta:hover {
+  transform: scale(1.03);
+  background-color: #20E3EB;
+  color: #023C8B;
+  border-color: #20E3EB;
 }
 
 /* Ensure button text never wraps on narrow screens - reduce padding when needed */
@@ -256,7 +303,8 @@
   .btn-primary,
   .btn-nav-cta,
   .btn-secondary,
-  .btn-secondary-teal {
+  .btn-secondary-teal,
+  .btn-agitation-cta {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -318,7 +366,7 @@ html {
   right: 0;
   width: 48px;
   height: 48px;
-  background: #1A393B;
+  background: #023C8B;
   border-radius: 0 16px 0 0;
   z-index: 2;
   pointer-events: none;
@@ -448,7 +496,7 @@ portfolio-card-right {
   right: -4px;
   width: 48px;
   height: 48px;
-  background: #13969F;
+  background: #20E3EB;
   border-radius: 12px;
   z-index: 2;
 }
@@ -642,11 +690,11 @@ portfolio-card-right {
 }
 
 .content-carousel-tab:hover {
-  color: #13969F;
+  color: #20E3EB;
 }
 
 .content-carousel-tab--active {
-  color: #13969F;
+  color: #20E3EB;
   font-weight: 600;
 }
 
@@ -660,14 +708,14 @@ portfolio-card-right {
 }
 
 .content-carousel-tab--pill:hover {
-  border-color: #13969F;
-  color: #13969F;
+  border-color: #20E3EB;
+  color: #20E3EB;
 }
 
 .content-carousel-tab--pill.content-carousel-tab--active {
-  border-color: #13969F;
+  border-color: #20E3EB;
   background: transparent;
-  color: #13969F;
+  color: #20E3EB;
 }
 
 /* Horizontal separator between category tabs and content - body text color, 1px, low opacity */
@@ -694,11 +742,11 @@ portfolio-card-right {
   background-color: rgba(0, 0, 0, 0.02);
 }
 
-/* Green line below the text/subtitle block, low opacity - matches reference */
+/* Line below each service entry - navy to match services brand color */
 .service-line {
   height: 1px;
   width: 100%;
-  background: rgba(19, 150, 159, 0.25);
+  background: rgba(2, 60, 139, 0.25);
   margin-top: 1.5rem;
   margin-bottom: 0;
 }
@@ -724,7 +772,7 @@ portfolio-card-right {
 
 .service-expanded-inner {
   padding: 1.25rem 0 1.5rem 1rem;
-  border-left: 3px solid rgba(19, 150, 159, 0.3);
+  border-left: 3px solid rgba(2, 60, 139, 0.3);
   margin-left: 0.25rem;
 }
 
@@ -753,7 +801,7 @@ portfolio-card-right {
 .service-list-line {
   height: 1px;
   width: 100%;
-  background: rgba(19, 150, 159, 0.3);
+  background: rgba(32, 227, 235, 0.3);
 }
 
 .services-list-wrapper[data-services-list] .services-list-inner {
@@ -812,7 +860,7 @@ portfolio-card-right {
 }
 
 .timeline-list .timeline-marker .timeline-dot--active {
-  background-color: #13969F;
+  background-color: #20E3EB;
 }
 
 .timeline-list .timeline-marker .timeline-dot--inactive {
@@ -827,7 +875,7 @@ portfolio-card-right {
 }
 
 .timeline-list .timeline-marker .timeline-line--active {
-  background-color: #13969F;
+  background-color: #20E3EB;
 }
 
 .timeline-list .timeline-marker .timeline-line--inactive {
@@ -882,7 +930,7 @@ portfolio-card-right {
 a:focus-visible,
 button:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 2px #13969F;
+  box-shadow: 0 0 0 2px #20E3EB;
 }
 
 /* Mobile menu - slide + fade (400ms, same easing as FAQ/service expand) */
@@ -987,19 +1035,19 @@ button:focus-visible {
   overflow: visible;
 }
 
-/* Teal L-shaped accent - overlays top-right corner, creates "wrapped" look */
+/* Navy L-shaped accent - overlays top-right corner, creates "wrapped" look */
 .process-img-frame-accent {
   position: absolute;
   top: 0;
   right: 0;
   width: 48px;
   height: 48px;
-  background: #1A393B;
+  background: #023C8B;
   border-radius: 0 12px 0 0;
   z-index: 2;
 }
 
-/* Alternate: teal accent at bottom-left for visual variety */
+/* Alternate: navy accent at bottom-left for visual variety */
 .process-img-frame.process-img-frame--alt .process-img-frame-accent {
   top: auto;
   right: auto;
@@ -1096,8 +1144,8 @@ img {
 .booking-form-card {
   background: #fff;
   border-radius: 16px;
-  border: 1px solid rgba(26, 57, 59, 0.1);
-  box-shadow: 0 12px 48px rgba(26, 57, 59, 0.08);
+  border: 1px solid rgba(2, 60, 139, 0.1);
+  box-shadow: 0 12px 48px rgba(2, 60, 139, 0.08);
   padding: 40px;
 }
 .booking-form-section {
@@ -1107,10 +1155,10 @@ img {
   margin-bottom: 0;
 }
 .booking-section-title {
-  font-family: Montserrat, ui-sans-serif, system-ui, sans-serif;
+  font-family: 'League Spartan', ui-sans-serif, system-ui, sans-serif;
   font-size: 20px;
   font-weight: 700;
-  color: #1A393B;
+  color: #222222;
   margin-bottom: 8px;
   letter-spacing: -0.02em;
 }
@@ -1133,7 +1181,7 @@ img {
   margin-bottom: 8px;
 }
 .booking-form-label .required {
-  color: #13969F;
+  color: #20E3EB;
   margin-left: 4px;
 }
 .booking-form-sublabel {
@@ -1147,7 +1195,7 @@ img {
 .booking-form-textarea {
   width: 100%;
   padding: 12px 16px;
-  font-family: 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+  font-family: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
   font-size: 15px;
   border: 1px solid #e2e8f0;
   border-radius: 8px;
@@ -1158,8 +1206,8 @@ img {
 .booking-form-select:focus,
 .booking-form-textarea:focus {
   outline: none;
-  border-color: #13969F;
-  box-shadow: 0 0 0 3px rgba(19, 150, 159, 0.12);
+  border-color: #20E3EB;
+  box-shadow: 0 0 0 3px rgba(32, 227, 235, 0.12);
 }
 .booking-form-textarea {
   min-height: 100px;
@@ -1186,8 +1234,8 @@ img {
 }
 .booking-radio-option:hover,
 .booking-checkbox-option:hover {
-  border-color: #13969F;
-  background: rgba(19, 150, 159, 0.04);
+  border-color: #20E3EB;
+  background: rgba(32, 227, 235, 0.04);
 }
 .booking-radio-option input,
 .booking-checkbox-option input {
@@ -1224,17 +1272,17 @@ img {
   transition: all 0.2s;
 }
 .booking-budget-option input:checked ~ .booking-budget-card {
-  border-color: #13969F;
-  background: rgba(19, 150, 159, 0.08);
+  border-color: #20E3EB;
+  background: rgba(32, 227, 235, 0.08);
 }
 .booking-budget-card:hover {
   border-color: #13969F;
 }
 .booking-budget-card .amount {
-  font-family: Montserrat, ui-sans-serif, system-ui, sans-serif;
+  font-family: 'League Spartan', ui-sans-serif, system-ui, sans-serif;
   font-size: 18px;
   font-weight: 700;
-  color: #1A393B;
+  color: #023C8B;
   display: block;
 }
 .booking-budget-card .label {
@@ -1245,11 +1293,11 @@ img {
 .booking-submit-btn {
   width: 100%;
   padding: 16px 32px;
-  font-family: Montserrat, ui-sans-serif, system-ui, sans-serif;
+  font-family: 'League Spartan', ui-sans-serif, system-ui, sans-serif;
   font-size: 16px;
   font-weight: 700;
   letter-spacing: -0.01em;
-  background: #1A393B;
+  background: #023C8B;
   color: #fff;
   border: none;
   border-radius: 12px;
@@ -1259,7 +1307,9 @@ img {
 }
 .booking-submit-btn:hover {
   transform: scale(1.02);
-  box-shadow: 0 8px 24px rgba(26, 57, 59, 0.25);
+  box-shadow: 0 8px 24px rgba(32, 227, 235, 0.35);
+  background: #20E3EB;
+  color: #023C8B;
 }
 .booking-submit-btn:disabled {
   opacity: 0.5;
@@ -1276,8 +1326,8 @@ img {
   padding: 48px 40px;
   background: #fff;
   border-radius: 16px;
-  border: 1px solid rgba(26, 57, 59, 0.1);
-  box-shadow: 0 12px 48px rgba(26, 57, 59, 0.08);
+  border: 1px solid rgba(2, 60, 139, 0.1);
+  box-shadow: 0 12px 48px rgba(2, 60, 139, 0.08);
 }
 .booking-success-message.show {
   display: block;
@@ -1285,7 +1335,7 @@ img {
 .booking-success-icon {
   width: 64px;
   height: 64px;
-  background: linear-gradient(135deg, #1A393B, #13969F);
+  background: linear-gradient(135deg, #023C8B, #20E3EB);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1295,10 +1345,10 @@ img {
   color: #fff;
 }
 .booking-success-title {
-  font-family: Montserrat, ui-sans-serif, system-ui, sans-serif;
+  font-family: 'League Spartan', ui-sans-serif, system-ui, sans-serif;
   font-size: 28px;
   font-weight: 800;
-  color: #1A393B;
+  color: #222222;
   margin-bottom: 16px;
 }
 .booking-success-text {
@@ -1316,8 +1366,8 @@ img {
 .booking-wizard-card {
   background: #fff;
   border-radius: 16px;
-  border: 1px solid rgba(26, 57, 59, 0.1);
-  box-shadow: 0 12px 48px rgba(26, 57, 59, 0.08);
+  border: 1px solid rgba(2, 60, 139, 0.1);
+  box-shadow: 0 12px 48px rgba(2, 60, 139, 0.08);
   padding: 40px;
   position: relative;
   overflow: hidden;
@@ -1357,11 +1407,11 @@ img {
   transition: all 0.2s;
 }
 .booking-stepper-dot.is-active {
-  background: #1A393B;
+  background: #023C8B;
   transform: scale(1.2);
 }
 .booking-stepper-dot.is-complete {
-  background: #13969F;
+  background: #20E3EB;
 }
 .booking-wizard-back {
   padding: 8px 16px;
@@ -1373,11 +1423,11 @@ img {
   cursor: pointer;
   border-radius: 8px;
   transition: all 0.2s;
-  font-family: 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+  font-family: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
 }
 .booking-wizard-back:hover:not(:disabled) {
-  color: #1A393B;
-  background: rgba(26, 57, 59, 0.06);
+  color: #023C8B;
+  background: rgba(2, 60, 139, 0.06);
 }
 .booking-wizard-back:disabled {
   opacity: 0.4;
@@ -1390,10 +1440,10 @@ img {
   height: 48px;
   padding: 0 32px;
   border-radius: 12px;
-  background-color: #1A393B;
+  background-color: #023C8B;
   color: white;
   font-weight: 700;
-  font-family: Montserrat, ui-sans-serif, system-ui, sans-serif;
+  font-family: 'League Spartan', ui-sans-serif, system-ui, sans-serif;
   font-size: 16px;
   border: none;
   cursor: pointer;
