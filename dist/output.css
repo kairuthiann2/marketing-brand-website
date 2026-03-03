@@ -1413,10 +1413,6 @@ video {
   font-weight: 600;
 }
 
-.uppercase {
-  text-transform: uppercase;
-}
-
 .italic {
   font-style: italic;
 }
@@ -1652,7 +1648,6 @@ video {
   font-weight: 500;
   line-height: 1.25;
   letter-spacing: 0.05em;
-  text-transform: uppercase;
 }
 
 /* Pill/tag above headings: vertical center text */
@@ -1927,7 +1922,6 @@ video {
   font-size: 0.875rem;
   font-weight: 500;
   letter-spacing: 0.05em;
-  text-transform: uppercase;
   margin-bottom: 1.5rem;
 }
 
@@ -3572,10 +3566,6 @@ img {
     height: 588px;
   }
 
-  .lg\:min-h-\[520px\] {
-    min-height: 520px;
-  }
-
   .lg\:min-h-\[588px\] {
     min-height: 588px;
   }
@@ -3586,10 +3576,6 @@ img {
 
   .lg\:max-w-\[380px\] {
     max-width: 380px;
-  }
-
-  .lg\:max-w-\[85\%\] {
-    max-width: 85%;
   }
 
   .lg\:max-w-full {
@@ -3614,10 +3600,6 @@ img {
 
   .lg\:justify-start {
     justify-content: flex-start;
-  }
-
-  .lg\:justify-end {
-    justify-content: flex-end;
   }
 
   .lg\:gap-12 {

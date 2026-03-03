@@ -39,7 +39,6 @@
   font-weight: 500;
   line-height: 1.25;
   letter-spacing: 0.05em;
-  text-transform: uppercase;
 }
 
 /* Pill/tag above headings: vertical center text */
@@ -298,7 +297,6 @@
   font-size: 0.875rem;
   font-weight: 500;
   letter-spacing: 0.05em;
-  text-transform: uppercase;
   margin-bottom: 1.5rem;
 }
 .cta-consultation-card .cta-heading {
