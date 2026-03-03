@@ -127,3 +127,29 @@ When new or important steps are added to this guide, **update the README** (`REA
 | Dubious ownership | Run `git config --global --add safe.directory 'PATH'` |
 | Push rejected | Pull first: `git pull origin main --rebase`, then push |
 | Styles broken after clone | Run `npm install` and `npm run build` |
+| **Live site shows old/different content after push** | See [GitHub Pages deployment](#github-pages-deployment) below |
+
+---
+
+## GitHub Pages Deployment
+
+The live site is at: **https://kairuthiann2.github.io/marketing-brand-website/**
+
+### If the live site doesn't reflect your latest push
+
+1. **Verify GitHub Pages source**  
+   Go to the repo → **Settings** → **Pages**. Under "Build and deployment", ensure:
+   - **Source:** Deploy from a branch
+   - **Branch:** `main` (not `gh-pages`)
+   - **Folder:** `/ (root)`
+
+   If it's set to `gh-pages`, the live site will not update when you push to `main`. Switch to `main` or set up a workflow to deploy from `main`.
+
+2. **Allow time for deployment**  
+   GitHub Pages can take 1–2 minutes to update after a push.
+
+3. **Hard refresh / clear cache**  
+   Use Ctrl+Shift+R (Windows) or Cmd+Shift+R (Mac), or try an incognito/private window.
+
+4. **Check that CSS loads**  
+   Open DevTools (F12) → **Network** tab → reload the page. Confirm `dist/output.css` returns 200. If it returns 404, the path or deployment source is wrong.

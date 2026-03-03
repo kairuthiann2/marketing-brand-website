@@ -356,6 +356,30 @@ html {
   display: block;
 }
 
+/* Bare cards: no mat, no outer box, no accents - image stands alone */
+.portfolio-card-bare {
+  display: block;
+  width: 100%;
+}
+.portfolio-card-bare-inner {
+  overflow: hidden;
+  border-radius: 12px;
+  background: transparent;
+  width: 100%;
+}
+.portfolio-card-bare-inner--square {
+  aspect-ratio: 4 / 3;
+}
+.portfolio-card-bare-inner img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  transform: scale(1.5);
+  transform-origin: center center;
+}
+
 /* Square cards for Brand Guidelines (Design/Digital) */
 .portfolio-card-left-inner--square {
   aspect-ratio: 1 / 1;
@@ -591,6 +615,7 @@ portfolio-card-right {
 .content-carousel-viewport {
   overflow: hidden;
   position: relative;
+  width: 100%;
 }
 
 [data-content-carousel-track] {
@@ -926,6 +951,35 @@ button:focus-visible {
   }
 }
 
+/* Portfolio Carousel: bare images scrolling right-to-left */
+.portfolio-carousel-marquee {
+  position: relative;
+  width: 100%;
+}
+.portfolio-carousel-marquee-track {
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+/* Social Templates: bare images scrolling left-to-right */
+.portfolio-social-marquee {
+  position: relative;
+  width: 100%;
+}
+.portfolio-social-marquee-track {
+  width: max-content;
+  animation: marquee-reverse 30s linear infinite;
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 /* Process section image frame - white frame + teal L-shaped accent + soft shadow */
 .process-img-frame {
   position: relative;
@@ -967,14 +1021,17 @@ button:focus-visible {
   display: flex;
 }
 
+.process-img-frame-inner picture,
 .process-img-frame-inner img {
-  object-fit: cover;
-  object-position: center;
   width: 100%;
   height: 100%;
   flex: 1;
   min-height: 0;
   display: block;
+}
+.process-img-frame-inner img {
+  object-fit: cover;
+  object-position: center;
   border-radius: 6px;
 }
 
