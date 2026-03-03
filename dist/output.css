@@ -934,18 +934,8 @@ video {
   flex-shrink: 0;
 }
 
-.origin-top {
-  transform-origin: top;
-}
-
 .-translate-y-1\/2 {
   --tw-translate-y: -50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.scale-125 {
-  --tw-scale-x: 1.25;
-  --tw-scale-y: 1.25;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1178,6 +1168,10 @@ video {
 .bg-brand-dark {
   --tw-bg-opacity: 1;
   background-color: rgb(2 60 139 / var(--tw-bg-opacity, 1));
+}
+
+.bg-brand-dark\/15 {
+  background-color: rgb(2 60 139 / 0.15);
 }
 
 .bg-brand-teal {
@@ -1900,6 +1894,94 @@ video {
   color: #023C8B;
 }
 
+/* CTA consultation card: dark blue card with high-contrast teal button */
+
+.cta-consultation-card {
+  background-color: #023C8B;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: none;
+}
+
+@media (min-width: 1024px) {
+  .cta-consultation-card {
+    padding: 3rem;
+  }
+}
+
+.cta-consultation-card .cta-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(32, 227, 235, 0.7);
+  color: #20E3EB;
+  font-family: 'DM Mono', ui-monospace, monospace;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.cta-consultation-card .cta-heading {
+  font-family: 'League Spartan', ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .cta-consultation-card .cta-heading {
+    font-size: 1.875rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cta-consultation-card .cta-heading {
+    font-size: 2.25rem;
+  }
+}
+
+.cta-consultation-card .cta-description {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1.125rem;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+}
+
+/* High-contrast primary button for CTA card: teal bg, dark text */
+
+.btn-cta-primary {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  padding: 0 32px;
+  border-radius: 12px;
+  background-color: #20E3EB;
+  color: #023C8B;
+  font-weight: 700;
+  font-family: 'League Spartan', ui-sans-serif, system-ui, sans-serif;
+  white-space: nowrap;
+  text-align: center;
+  transition: all 300ms ease-in-out;
+}
+
+.btn-cta-primary:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.15), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  background-color: #3aecf3;
+  color: #023C8B;
+}
+
 /* Agitation section CTA: white text, navy bg, cyan border (for use on dark navy backgrounds) */
 
 .btn-agitation-cta {
@@ -1933,7 +2015,8 @@ video {
   .btn-nav-cta,
   .btn-secondary,
   .btn-secondary-teal,
-  .btn-agitation-cta {
+  .btn-agitation-cta,
+  .btn-cta-primary {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -2701,7 +2784,8 @@ button:focus-visible {
   }
 }
 
-/* Portfolio Carousel: bare images scrolling right-to-left */
+/* Portfolio Carousel: bare images scrolling right-to-left
+   Consistent 12px radius site-wide for cards/content (matches button, FAQ, process) */
 
 .portfolio-carousel-marquee {
   position: relative;
@@ -2714,7 +2798,19 @@ button:focus-visible {
   animation: marquee 30s linear infinite;
 }
 
-/* Social Templates: bare images scrolling left-to-right */
+.portfolio-carousel-marquee-item {
+  border-radius: 12px;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.portfolio-carousel-marquee-item img {
+  border-radius: 12px;
+  display: block;
+}
+
+/* Social Templates: bare images scrolling left-to-right
+   Same 12px radius as Carousels for consistency */
 
 .portfolio-social-marquee {
   position: relative;
@@ -2725,6 +2821,30 @@ button:focus-visible {
   width: -moz-max-content;
   width: max-content;
   animation: marquee-reverse 30s linear infinite;
+}
+
+.portfolio-social-marquee-item {
+  border-radius: 12px;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.portfolio-social-marquee-item img {
+  border-radius: 12px;
+  display: block;
+}
+
+/* Print section: bare images (no card) — matches carousel/social template treatment.
+   No fixed aspect-ratio = no clipping; image dictates height. */
+
+.portfolio-print-image {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.portfolio-print-image img {
+  border-radius: 12px;
+  display: block;
 }
 
 @keyframes marquee-reverse {

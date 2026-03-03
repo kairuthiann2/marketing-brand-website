@@ -133,6 +133,9 @@
     goToSlide(0);
 
     root._updateViewportHeight = updateViewportHeight;
+    root._goToSlide = function (index) {
+      goToSlide(index);
+    };
     window.addEventListener('resize', updateViewportHeight);
 
     // Start only if visible; observer handles visibility changes (e.g. nested carousel coming into view)
